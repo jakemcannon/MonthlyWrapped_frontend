@@ -30,4 +30,5 @@ img{
   width: 300px;
   /* border: 1px solid green; */
   border-radius: 4px;
+  box-shadow: 0 8px 6px -6px rgb(129, 129, 129);
 }
