@@ -1,0 +1,293 @@
+{
+  "items" : [ {
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/artist/0ZoYAbDGICaSPSfTTvworW"
+    },
+    "followers" : {
+      "href" : null,
+      "total" : 16581
+    },
+    "genres" : [ "experimental indie", "experimental pop", "freak folk", "popgaze" ],
+    "href" : "https://api.spotify.com/v1/artists/0ZoYAbDGICaSPSfTTvworW",
+    "id" : "0ZoYAbDGICaSPSfTTvworW",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/980bd8801f1876c4014a54798fb32f2d1728b003",
+      "width" : 640
+    }, {
+      "height" : 320,
+      "url" : "https://i.scdn.co/image/64bc6af7dc702f17913235247a886a70fde4a352",
+      "width" : 320
+    }, {
+      "height" : 160,
+      "url" : "https://i.scdn.co/image/f3b3ca20f243a0417b649fd6a955ced67ab0587b",
+      "width" : 160
+    } ],
+    "name" : "Tonstartssbandht",
+    "popularity" : 34,
+    "type" : "artist",
+    "uri" : "spotify:artist:0ZoYAbDGICaSPSfTTvworW"
+  }, {
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/artist/2xvtxDNInKDV4AvGmjw6d1"
+    },
+    "followers" : {
+      "href" : null,
+      "total" : 169484
+    },
+    "genres" : [ "emo rap", "escape room", "glitchcore", "underground hip hop", "vapor trap" ],
+    "href" : "https://api.spotify.com/v1/artists/2xvtxDNInKDV4AvGmjw6d1",
+    "id" : "2xvtxDNInKDV4AvGmjw6d1",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/99430ab41014f046125fbd465a40c411262d2907",
+      "width" : 640
+    }, {
+      "height" : 320,
+      "url" : "https://i.scdn.co/image/dd6fd3c84249dfd3d556623ee68afb21e8c41bf5",
+      "width" : 320
+    }, {
+      "height" : 160,
+      "url" : "https://i.scdn.co/image/1f13382660213676af972512faf826f3543e776e",
+      "width" : 160
+    } ],
+    "name" : "Bladee",
+    "popularity" : 69,
+    "type" : "artist",
+    "uri" : "spotify:artist:2xvtxDNInKDV4AvGmjw6d1"
+  }, {
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/artist/6hG0VsXXlD10l60TqiIHIX"
+    },
+    "followers" : {
+      "href" : null,
+      "total" : 79220
+    },
+    "genres" : [ "escape room", "glitchcore", "hyperpop", "underground hip hop" ],
+    "href" : "https://api.spotify.com/v1/artists/6hG0VsXXlD10l60TqiIHIX",
+    "id" : "6hG0VsXXlD10l60TqiIHIX",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/4167745422c731cc0fa65ce43bfd337686ec974a",
+      "width" : 640
+    }, {
+      "height" : 320,
+      "url" : "https://i.scdn.co/image/f3fbdd61a7c4623ac5e00cd9d502fc2ca6862691",
+      "width" : 320
+    }, {
+      "height" : 160,
+      "url" : "https://i.scdn.co/image/7333fa3cf2e6a45bafe2db5e2cfcd6915f255b33",
+      "width" : 160
+    } ],
+    "name" : "Ecco2k",
+    "popularity" : 62,
+    "type" : "artist",
+    "uri" : "spotify:artist:6hG0VsXXlD10l60TqiIHIX"
+  }, {
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/artist/5KQMtyPE8DCQNUzoNqlEsE"
+    },
+    "followers" : {
+      "href" : null,
+      "total" : 303036
+    },
+    "genres" : [ "art pop", "art rock", "dance rock", "new romantic", "new wave", "new wave pop", "permanent wave", "post-punk", "synthpop" ],
+    "href" : "https://api.spotify.com/v1/artists/5KQMtyPE8DCQNUzoNqlEsE",
+    "id" : "5KQMtyPE8DCQNUzoNqlEsE",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/02fb744b9b05b430949a1a08f21c00f360047cf5",
+      "width" : 640
+    }, {
+      "height" : 320,
+      "url" : "https://i.scdn.co/image/f58702a62ec1e529a63d18dc99c69f248c118261",
+      "width" : 320
+    }, {
+      "height" : 160,
+      "url" : "https://i.scdn.co/image/64bba7062a23676cdb12d9282b1ffa374205d181",
+      "width" : 160
+    } ],
+    "name" : "Gary Numan",
+    "popularity" : 58,
+    "type" : "artist",
+    "uri" : "spotify:artist:5KQMtyPE8DCQNUzoNqlEsE"
+  }, {
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/artist/46OZe7BgkZhisNbEMW4oqq"
+    },
+    "followers" : {
+      "href" : null,
+      "total" : 65167
+    },
+    "genres" : [ "indie garage rock", "oc indie" ],
+    "href" : "https://api.spotify.com/v1/artists/46OZe7BgkZhisNbEMW4oqq",
+    "id" : "46OZe7BgkZhisNbEMW4oqq",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/b0294d1bc1c0cd0bfe730b8ee4762b1d31e6f3c2",
+      "width" : 640
+    }, {
+      "height" : 320,
+      "url" : "https://i.scdn.co/image/4be126403f10c1125dc3fb76e89457c6930f1f4d",
+      "width" : 320
+    }, {
+      "height" : 160,
+      "url" : "https://i.scdn.co/image/3cb69d597c64e1b6f066233e3357627c434a4dc2",
+      "width" : 160
+    } ],
+    "name" : "Enjoy",
+    "popularity" : 52,
+    "type" : "artist",
+    "uri" : "spotify:artist:46OZe7BgkZhisNbEMW4oqq"
+  }, {
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/artist/0ngUeF0DGpYmPec80MqSi1"
+    },
+    "followers" : {
+      "href" : null,
+      "total" : 91484
+    },
+    "genres" : [ "art pop", "chamber psych", "electronica", "escape room", "experimental hip hop", "microhouse", "new rave" ],
+    "href" : "https://api.spotify.com/v1/artists/0ngUeF0DGpYmPec80MqSi1",
+    "id" : "0ngUeF0DGpYmPec80MqSi1",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/cba30ea575aca3e07e562b71aa5bd07eee143c16",
+      "width" : 640
+    }, {
+      "height" : 320,
+      "url" : "https://i.scdn.co/image/d9e0de1fb29e0428768a7213e7b5c1bcaface8ae",
+      "width" : 320
+    }, {
+      "height" : 160,
+      "url" : "https://i.scdn.co/image/cee43b8508f787925a01e2a7880aff84e1f356be",
+      "width" : 160
+    } ],
+    "name" : "Against All Logic",
+    "popularity" : 54,
+    "type" : "artist",
+    "uri" : "spotify:artist:0ngUeF0DGpYmPec80MqSi1"
+  }, {
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/artist/1n65zfwYIj5kKEtNgxUlWb"
+    },
+    "followers" : {
+      "href" : null,
+      "total" : 570071
+    },
+    "genres" : [ "alternative rock", "art rock", "dance rock", "dream pop", "gothic rock", "new romantic", "new wave", "new wave pop", "post-punk", "punk", "uk post-punk" ],
+    "href" : "https://api.spotify.com/v1/artists/1n65zfwYIj5kKEtNgxUlWb",
+    "id" : "1n65zfwYIj5kKEtNgxUlWb",
+    "images" : [ {
+      "height" : 669,
+      "url" : "https://i.scdn.co/image/baf868deb6e3944db2717194bbdd9016e48f3de2",
+      "width" : 999
+    }, {
+      "height" : 428,
+      "url" : "https://i.scdn.co/image/f9583d2a331faaba5174ef195f1d46d1c9639af9",
+      "width" : 639
+    }, {
+      "height" : 134,
+      "url" : "https://i.scdn.co/image/6565aa6133896a4c77f1b2b9bc9ef7caf55558c0",
+      "width" : 200
+    }, {
+      "height" : 43,
+      "url" : "https://i.scdn.co/image/65de43a771caba0d9157cbf1c16a6810b9cb385b",
+      "width" : 64
+    } ],
+    "name" : "Siouxsie and the Banshees",
+    "popularity" : 62,
+    "type" : "artist",
+    "uri" : "spotify:artist:1n65zfwYIj5kKEtNgxUlWb"
+  }, {
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/artist/41Q0HrwWBtuUkJc7C1Rp6K"
+    },
+    "followers" : {
+      "href" : null,
+      "total" : 704763
+    },
+    "genres" : [ "alternative metal", "alternative rock", "funk metal", "funk rock", "nu metal", "pop rock", "rap rock", "reggae fusion", "rock" ],
+    "href" : "https://api.spotify.com/v1/artists/41Q0HrwWBtuUkJc7C1Rp6K",
+    "id" : "41Q0HrwWBtuUkJc7C1Rp6K",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/9db73e93d333b7b7bef62c42682379eb8356ea18",
+      "width" : 640
+    }, {
+      "height" : 320,
+      "url" : "https://i.scdn.co/image/1ff6245b57f5306c160b2d7b024590d9997bbda1",
+      "width" : 320
+    }, {
+      "height" : 160,
+      "url" : "https://i.scdn.co/image/c2c0343882c50251528f2cb918b667e16fe7d93f",
+      "width" : 160
+    } ],
+    "name" : "311",
+    "popularity" : 67,
+    "type" : "artist",
+    "uri" : "spotify:artist:41Q0HrwWBtuUkJc7C1Rp6K"
+  }, {
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/artist/4UVlSeEFDPmlkYKaRMRoOz"
+    },
+    "followers" : {
+      "href" : null,
+      "total" : 161415
+    },
+    "genres" : [ "art punk", "indie garage rock", "oc indie" ],
+    "href" : "https://api.spotify.com/v1/artists/4UVlSeEFDPmlkYKaRMRoOz",
+    "id" : "4UVlSeEFDPmlkYKaRMRoOz",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/1ee7cf02deff88c6b03e68bad940abb237ece612",
+      "width" : 640
+    }, {
+      "height" : 320,
+      "url" : "https://i.scdn.co/image/f7b1f9b1e57beec262cc7ea7aa740666cbb99f3f",
+      "width" : 320
+    }, {
+      "height" : 160,
+      "url" : "https://i.scdn.co/image/641113c98ba947bdf2bccb3affd865094a91bd3c",
+      "width" : 160
+    } ],
+    "name" : "The Garden",
+    "popularity" : 61,
+    "type" : "artist",
+    "uri" : "spotify:artist:4UVlSeEFDPmlkYKaRMRoOz"
+  }, {
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/artist/0WtTGUjbur1R1cNzBvbsMU"
+    },
+    "followers" : {
+      "href" : null,
+      "total" : 115311
+    },
+    "genres" : [ "alternative rock", "art pop", "art rock", "chamber pop", "chamber psych", "chillwave", "dance-punk", "dream pop", "electronica", "experimental", "freak folk", "garage psych", "hauntology", "indie pop", "indietronica", "neo-psychedelic", "nu gaze" ],
+    "href" : "https://api.spotify.com/v1/artists/0WtTGUjbur1R1cNzBvbsMU",
+    "id" : "0WtTGUjbur1R1cNzBvbsMU",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/ab67616d0000b273079194ae33a2ffdc509b1a5a",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/ab67616d00001e02079194ae33a2ffdc509b1a5a",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/ab67616d00004851079194ae33a2ffdc509b1a5a",
+      "width" : 64
+    } ],
+    "name" : "Broadcast",
+    "popularity" : 53,
+    "type" : "artist",
+    "uri" : "spotify:artist:0WtTGUjbur1R1cNzBvbsMU"
+  } ],
+  "total" : 34,
+  "limit" : 10,
+  "offset" : 0,
+  "previous" : null,
+  "href" : "https://api.spotify.com/v1/me/top/artists?limit=10&offset=0&time_range=short_term",
+  "next" : "https://api.spotify.com/v1/me/top/artists?limit=10&offset=10&time_range=short_term"
+}
