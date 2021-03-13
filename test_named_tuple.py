@@ -42,8 +42,6 @@ def create_song_story_data():
 	artists = []
 	images = []
 
-	# ????????
-
 	for item in data["items"]:
 		_artists = item["artists"]
 		if len(_artists) > 1:

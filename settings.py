@@ -7,7 +7,7 @@ FOOTER_FONT_COLOR = (0,0,0)
 HEADER_FONT_SIZE = 70
 FOOTER_FONT_SIZE = 60
 
-HEADER_TEXT = f"{strftime('%B')} Top ArtistsSS"
+HEADER_TEXT = f"{strftime('%B')} Top Artists"
 FOOTER_TEXT = "monthlywrapped.com"
 
 HEADER_FONT = 'Library/Fonts/CircularStd-Bold.ttf'
