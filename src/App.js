@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {useEffect} from 'react';
 import './App.css';
 import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -7,6 +7,14 @@ import artist_image from './example_artists.png'
 import Header from './components/Header/Header.js';
 
 function App() {
+
+  useEffect(() => {
+    fetch('/home').then(response => 
+      response.json().then(data => {
+        console.log(data);
+    }))
+  }, [])
+
   return (
     <div className="container">
       {/* <Header /> */}
@@ -20,7 +28,22 @@ function App() {
         <img src={artist_image} className="App-photo" />
         </li>
       </ul>
-      <Button variant="secondary">Coming soon!</Button>
+      <Button variant="success" onClick={async () => {
+        const r = await fetch("/login", {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "*"
+          }
+        }).then(r => 
+          r.json().then(d => {
+            window.location = d.data
+            console.log(d.data);
+        }))
+      }}
+      >
+        Login
+      </Button>
     </div>
   );
 }

@@ -1,19 +1,14 @@
-from time import strftime
-
-BASE_COLOR = "#F1C3ED"
-HEADER_FONT_COLOR = (0,0,0)
-FOOTER_FONT_COLOR = (0,0,0)
 
 HEADER_FONT_SIZE = 70
 FOOTER_FONT_SIZE = 60
 
-HEADER_TEXT = f"{strftime('%B')} Top Artists"
+
 FOOTER_TEXT = "monthlywrapped.com"
 
 HEADER_FONT = 'Library/Fonts/CircularStd-Bold.ttf'
 FOOTER_FONT = 'Library/Fonts/CircularStd-Bold.ttf'
 
-HEADER_POSITION_HEIGHT = 107
+HEADER_POSITION_HEIGHT = 140
 FOOTER_POSITION = (231, 1695)
 
 
@@ -21,12 +16,16 @@ FOOTER_POSITION = (231, 1695)
 SongStory
 """
 
-SONG_STORY_FONT_COLOR = (0, 0, 0)
+SONG_BASE_COLOR = "#FCB599"
+SONG_STORY_FONT_COLOR = (225,47,40)
+
 SONG_STORY_IMAGE_SIZE = (128, 130)
-SONG_TEXT_FONT = 'Library/Fonts/CircularStd-Medium.ttf'
 SONG_TEXT_SIZE = 50
-ARTIST_TEXT_FONT = 'Library/Fonts/CircularStd-BookItalic.ttf'
 ARTIST_TEXT_SIZE = 30
+
+SONG_TEXT_FONT = 'Library/Fonts/CircularStd-Medium.ttf'
+ARTIST_TEXT_FONT = 'Library/Fonts/CircularStd-BookItalic.ttf'
+
 
 
 SONG_THUMBNAIL_POSITION = [
@@ -55,8 +54,11 @@ ARTIST_TEXT_POSITION  = [
 ]
 
 """
-ArtistStory pixel positions
+ArtistStory
 """
+
+ARTIST_BASE_COLOR = "#EC4640"
+ARTIST_STORY_FONT_COLOR = (252,181,153)
 
 ARTIST_PHOTO_POSITION  = [
 	(281, 288), (548, 288),

@@ -1,6 +1,7 @@
 import os
 import json
 import requests
+from time import strftime
 from PIL import Image, ImageColor, ImageDraw, ImageFont, ImageOps
 
 import settings
@@ -11,14 +12,14 @@ class Story:
 		self.W = 1080
 		self.H = 1920
 
-	def create_header(self, draw):
+	def create_header(self, draw, header_text, font_color):
 		font = ImageFont.truetype(settings.HEADER_FONT, settings.HEADER_FONT_SIZE)
-		text_width, text_height = font.getsize(settings.HEADER_TEXT)
-		draw.text(((self.W-text_width)/2, settings.HEADER_POSITION_HEIGHT), settings.HEADER_TEXT, font=font, fill=settings.HEADER_FONT_COLOR)
+		text_width, text_height = font.getsize(header_text)
+		draw.text(((self.W-text_width)/2, settings.HEADER_POSITION_HEIGHT), header_text, font=font, fill=font_color)
 
-	def create_footer(self, draw):
+	def create_footer(self, draw, font_color):
 		font = ImageFont. truetype(settings.FOOTER_FONT, settings.FOOTER_FONT_SIZE)
-		draw.text((settings.FOOTER_POSITION), settings.FOOTER_TEXT, font=font, fill=settings.FOOTER_FONT_COLOR)
+		draw.text((settings.FOOTER_POSITION), settings.FOOTER_TEXT, font=font, fill=font_color)
 
 	def create_mask(self, x, y):
 		bigsize = (x * 3, y * 3)
@@ -35,13 +36,15 @@ class SongStory(Story):
 		self.songs = songs
 		self.artists = artists
 		self.images = images
+		self.header = f"{strftime('%B')} Top Songs"
+		self.font_color = settings.SONG_STORY_FONT_COLOR
 
 	def create_image(self):
-		base = Image.new('RGB', (self.W, self.H), ImageColor.getrgb(settings.BASE_COLOR))
+		base = Image.new('RGB', (self.W, self.H), ImageColor.getrgb(settings.SONG_BASE_COLOR))
 		draw = ImageDraw.Draw(base)
 
-		self.header = self.create_header(draw)
-		self.footer = self.create_footer(draw)
+		self.header = self.create_header(draw, self.header, self.font_color)
+		self.footer = self.create_footer(draw, self.font_color)
 		# todo
 		self.mask = self.create_mask(128, 130)
 		self.thumbnails = self.create_song_thumbnails(self.mask, base)
@@ -77,13 +80,16 @@ class ArtistStory(Story):
 		super(ArtistStory, self).__init__()
 		self.artists = artists
 		self.images = images
+		self.header = f"{strftime('%B')} Top Artists"
+		self.font_color = settings.ARTIST_STORY_FONT_COLOR
 
 	def create_image(self):
-		base = Image.new('RGB', (self.W, self.H), ImageColor.getrgb(settings.BASE_COLOR))
+		base = Image.new('RGB', (self.W, self.H), ImageColor.getrgb(settings.ARTIST_BASE_COLOR))
 		draw = ImageDraw.Draw(base)
 
-		self.header = self.create_header(draw)
-		self.footer = self.create_footer(draw)
+		print(self.header)
+		self.header = self.create_header(draw, self.header, self.font_color)
+		self.footer = self.create_footer(draw, self.font_color)
 		self.mask = self.create_mask(250, 250)
 		self.thumbnails = self.create_thumbnails(self.mask, base)
 		# base.show()
@@ -104,11 +110,13 @@ class ArtistStory(Story):
 
 response = create_artist_story_data()
 a = ArtistStory(response.artists, response.images)
+# a.create_image()
 # print(a.__dict__)
 # print(a.create_image())
 
 response = create_song_story_data()
 s = SongStory(response.artists, response.songs, response.images)
+# s.create_image()
 # print(s.__dict__)
 # print(s.create_image())
 

@@ -1,0 +1,289 @@
+{
+  "items" : [ {
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/artist/2xvtxDNInKDV4AvGmjw6d1"
+    },
+    "followers" : {
+      "href" : null,
+      "total" : 174756
+    },
+    "genres" : [ "emo rap", "escape room", "glitchcore", "underground hip hop", "vapor trap" ],
+    "href" : "https://api.spotify.com/v1/artists/2xvtxDNInKDV4AvGmjw6d1",
+    "id" : "2xvtxDNInKDV4AvGmjw6d1",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/99430ab41014f046125fbd465a40c411262d2907",
+      "width" : 640
+    }, {
+      "height" : 320,
+      "url" : "https://i.scdn.co/image/dd6fd3c84249dfd3d556623ee68afb21e8c41bf5",
+      "width" : 320
+    }, {
+      "height" : 160,
+      "url" : "https://i.scdn.co/image/1f13382660213676af972512faf826f3543e776e",
+      "width" : 160
+    } ],
+    "name" : "Bladee",
+    "popularity" : 68,
+    "type" : "artist",
+    "uri" : "spotify:artist:2xvtxDNInKDV4AvGmjw6d1"
+  }, {
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/artist/5DslL3PUa3BcRlCCEP64A4"
+    },
+    "followers" : {
+      "href" : null,
+      "total" : 4004
+    },
+    "genres" : [ ],
+    "href" : "https://api.spotify.com/v1/artists/5DslL3PUa3BcRlCCEP64A4",
+    "id" : "5DslL3PUa3BcRlCCEP64A4",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/a5b13822606c4268f76113700552a44e513f48fc",
+      "width" : 640
+    }, {
+      "height" : 320,
+      "url" : "https://i.scdn.co/image/26b69f16260a95260eae6b274b65b848201e0c38",
+      "width" : 320
+    }, {
+      "height" : 160,
+      "url" : "https://i.scdn.co/image/0b872ff2d3a6a5b21cc2ff644fc7b224e214a698",
+      "width" : 160
+    } ],
+    "name" : "The Hellp",
+    "popularity" : 33,
+    "type" : "artist",
+    "uri" : "spotify:artist:5DslL3PUa3BcRlCCEP64A4"
+  }, {
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/artist/5JLqvjW3Nyom2OsRUyFsS9"
+    },
+    "followers" : {
+      "href" : null,
+      "total" : 95907
+    },
+    "genres" : [ "alternative rock", "anti-folk", "art pop", "bay area indie", "dream pop", "escape room", "experimental", "experimental pop", "experimental rock", "freak folk", "grave wave", "indie rock", "lo-fi", "noise pop" ],
+    "href" : "https://api.spotify.com/v1/artists/5JLqvjW3Nyom2OsRUyFsS9",
+    "id" : "5JLqvjW3Nyom2OsRUyFsS9",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/ed05b074df3b5138d2fa7f4a53805244edb7e473",
+      "width" : 640
+    }, {
+      "height" : 320,
+      "url" : "https://i.scdn.co/image/8990b108781a38a6b6b63cac870232fe286bbc4e",
+      "width" : 320
+    }, {
+      "height" : 160,
+      "url" : "https://i.scdn.co/image/c1e70ae6843aba7c8db9a1b4b56eda8729699f2f",
+      "width" : 160
+    } ],
+    "name" : "Xiu Xiu",
+    "popularity" : 52,
+    "type" : "artist",
+    "uri" : "spotify:artist:5JLqvjW3Nyom2OsRUyFsS9"
+  }, {
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/artist/5iUnvXddCpOrbWKm7QMr6o"
+    },
+    "followers" : {
+      "href" : null,
+      "total" : 39629
+    },
+    "genres" : [ "art pop", "electronica", "escape room", "experimental hip hop", "hyperpop", "underground hip hop" ],
+    "href" : "https://api.spotify.com/v1/artists/5iUnvXddCpOrbWKm7QMr6o",
+    "id" : "5iUnvXddCpOrbWKm7QMr6o",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/fa6a494d7de7c5a9e2211b186fd3f64c66f46dfa",
+      "width" : 640
+    }, {
+      "height" : 320,
+      "url" : "https://i.scdn.co/image/425bbb66aa969880b35f4f77dcc181cbc9fc7420",
+      "width" : 320
+    }, {
+      "height" : 160,
+      "url" : "https://i.scdn.co/image/ebbc9891d796eb90ff8c99284ebae9e48b9e63b3",
+      "width" : 160
+    } ],
+    "name" : "Vegyn",
+    "popularity" : 57,
+    "type" : "artist",
+    "uri" : "spotify:artist:5iUnvXddCpOrbWKm7QMr6o"
+  }, {
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/artist/3psutwIiyR5tfTM1TTNxFv"
+    },
+    "followers" : {
+      "href" : null,
+      "total" : 7956
+    },
+    "genres" : [ "bubblegrunge", "indie punk", "indie rock" ],
+    "href" : "https://api.spotify.com/v1/artists/3psutwIiyR5tfTM1TTNxFv",
+    "id" : "3psutwIiyR5tfTM1TTNxFv",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/a08ffc6c639009a3c3ad334e6d7f870601549370",
+      "width" : 640
+    }, {
+      "height" : 320,
+      "url" : "https://i.scdn.co/image/fabf6b0cd3ab04053ab6b5dec22fc1305406e24e",
+      "width" : 320
+    }, {
+      "height" : 160,
+      "url" : "https://i.scdn.co/image/cafb4baa2de6a0bd7295e71e38738ed3f16a7dfc",
+      "width" : 160
+    } ],
+    "name" : "Strange Ranger",
+    "popularity" : 28,
+    "type" : "artist",
+    "uri" : "spotify:artist:3psutwIiyR5tfTM1TTNxFv"
+  }, {
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/artist/0ZoYAbDGICaSPSfTTvworW"
+    },
+    "followers" : {
+      "href" : null,
+      "total" : 16757
+    },
+    "genres" : [ "experimental indie", "experimental pop", "popgaze" ],
+    "href" : "https://api.spotify.com/v1/artists/0ZoYAbDGICaSPSfTTvworW",
+    "id" : "0ZoYAbDGICaSPSfTTvworW",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/980bd8801f1876c4014a54798fb32f2d1728b003",
+      "width" : 640
+    }, {
+      "height" : 320,
+      "url" : "https://i.scdn.co/image/64bc6af7dc702f17913235247a886a70fde4a352",
+      "width" : 320
+    }, {
+      "height" : 160,
+      "url" : "https://i.scdn.co/image/f3b3ca20f243a0417b649fd6a955ced67ab0587b",
+      "width" : 160
+    } ],
+    "name" : "Tonstartssbandht",
+    "popularity" : 34,
+    "type" : "artist",
+    "uri" : "spotify:artist:0ZoYAbDGICaSPSfTTvworW"
+  }, {
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/artist/3uX1tstdmFJyxW9b5mSNlU"
+    },
+    "followers" : {
+      "href" : null,
+      "total" : 12572
+    },
+    "genres" : [ "synth punk" ],
+    "href" : "https://api.spotify.com/v1/artists/3uX1tstdmFJyxW9b5mSNlU",
+    "id" : "3uX1tstdmFJyxW9b5mSNlU",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/8248710d78c24dcda7cba566817c42170519880a",
+      "width" : 640
+    }, {
+      "height" : 320,
+      "url" : "https://i.scdn.co/image/e54cf69f5e4726d00c666f1d7126777b999a6bf7",
+      "width" : 320
+    }, {
+      "height" : 160,
+      "url" : "https://i.scdn.co/image/595d750f718bdd5e6ffd687242eb4896082185c4",
+      "width" : 160
+    } ],
+    "name" : "Automatic",
+    "popularity" : 39,
+    "type" : "artist",
+    "uri" : "spotify:artist:3uX1tstdmFJyxW9b5mSNlU"
+  }, {
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/artist/6hG0VsXXlD10l60TqiIHIX"
+    },
+    "followers" : {
+      "href" : null,
+      "total" : 82001
+    },
+    "genres" : [ "escape room", "glitchcore", "hyperpop", "underground hip hop" ],
+    "href" : "https://api.spotify.com/v1/artists/6hG0VsXXlD10l60TqiIHIX",
+    "id" : "6hG0VsXXlD10l60TqiIHIX",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/4167745422c731cc0fa65ce43bfd337686ec974a",
+      "width" : 640
+    }, {
+      "height" : 320,
+      "url" : "https://i.scdn.co/image/f3fbdd61a7c4623ac5e00cd9d502fc2ca6862691",
+      "width" : 320
+    }, {
+      "height" : 160,
+      "url" : "https://i.scdn.co/image/7333fa3cf2e6a45bafe2db5e2cfcd6915f255b33",
+      "width" : 160
+    } ],
+    "name" : "Ecco2k",
+    "popularity" : 61,
+    "type" : "artist",
+    "uri" : "spotify:artist:6hG0VsXXlD10l60TqiIHIX"
+  }, {
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/artist/6UwhmfFkN3Rj2pXkpRTMU1"
+    },
+    "followers" : {
+      "href" : null,
+      "total" : 4636
+    },
+    "genres" : [ "indie garage rock" ],
+    "href" : "https://api.spotify.com/v1/artists/6UwhmfFkN3Rj2pXkpRTMU1",
+    "id" : "6UwhmfFkN3Rj2pXkpRTMU1",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/925a450390cf3bcb09c1fa3ddd28fea0d7865261",
+      "width" : 640
+    }, {
+      "height" : 320,
+      "url" : "https://i.scdn.co/image/6fd850cb4a4efb2ad04150b7e105b8b04db5243e",
+      "width" : 320
+    }, {
+      "height" : 160,
+      "url" : "https://i.scdn.co/image/4c5540b41f25345c4062dcdc4fd706dfec5aeb82",
+      "width" : 160
+    } ],
+    "name" : "Gap Girls",
+    "popularity" : 34,
+    "type" : "artist",
+    "uri" : "spotify:artist:6UwhmfFkN3Rj2pXkpRTMU1"
+  }, {
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/artist/2eMb96S1ZJ1YQ7FhWAzWJL"
+    },
+    "followers" : {
+      "href" : null,
+      "total" : 822
+    },
+    "genres" : [ ],
+    "href" : "https://api.spotify.com/v1/artists/2eMb96S1ZJ1YQ7FhWAzWJL",
+    "id" : "2eMb96S1ZJ1YQ7FhWAzWJL",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/b8bb4376629e33c826c635520fe03b05aadc91f2",
+      "width" : 640
+    }, {
+      "height" : 320,
+      "url" : "https://i.scdn.co/image/131346959ac356f46738c3333b4a7a6b1dea59f5",
+      "width" : 320
+    }, {
+      "height" : 160,
+      "url" : "https://i.scdn.co/image/8f2f6c5fc7a9f25a9a1a696547520ab5733de230",
+      "width" : 160
+    } ],
+    "name" : "Pearly Drops",
+    "popularity" : 31,
+    "type" : "artist",
+    "uri" : "spotify:artist:2eMb96S1ZJ1YQ7FhWAzWJL"
+  } ],
+  "total" : 43,
+  "limit" : 10,
+  "offset" : 0,
+  "href" : "https://api.spotify.com/v1/me/top/artists?limit=10&offset=0&time_range=short_term",
+  "previous" : null,
+  "next" : "https://api.spotify.com/v1/me/top/artists?limit=10&offset=10&time_range=short_term"
+}

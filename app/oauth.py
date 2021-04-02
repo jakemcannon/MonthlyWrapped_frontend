@@ -33,17 +33,20 @@ with app.app_context():
 @app.route("/")
 @app.route("/home")
 def home():
-	return "Home page"
+	return {"data": "Home page"}
 
 
-@app.route("/login")
+@app.route("/login", methods=["GET", "POST"])
 def create_authorization_url():
-	payload = {'client_id':client_id, 
+	payload = {
+		'client_id':client_id, 
 		'response_type':'code', 
 		'redirect_uri': redirect_uri, 
-		'scope': scope}
+		'scope': scope,
+		}
 	auth_url = auth_endpoint + urllib.parse.urlencode(payload)
-	return redirect(auth_url)
+	return {"data": auth_url}
+	# return redirect(auth_url, code=200)
 
 @app.route("/callback")
 def callback():
