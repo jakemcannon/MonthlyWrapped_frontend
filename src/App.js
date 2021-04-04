@@ -2,7 +2,9 @@ import React, {useEffect} from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './components/LandingPage.js';
+
 import LandingPage from './components/LandingPage.js';
+import About from './components/About.js'
 
 function App() {
 
