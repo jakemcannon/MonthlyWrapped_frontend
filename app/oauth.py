@@ -7,9 +7,10 @@ import uuid
 import requests
 import urllib
 import json	
-from flask import Flask, abort, request, redirect, session, url_for
+from flask import Flask, abort, request, redirect, session, url_for, jsonify
 
 from flask_jwt_extended import JWTManager, jwt_required, create_access_token, get_jwt_identity
+from flask_cors import CORS, cross_origin
 
 from db import db
 from db import User
@@ -36,6 +37,7 @@ with app.app_context():
 	db.create_all()
 
 jwt = JWTManager(app)
+CORS(app)
 
 # ----------- This toy example works based off the following tutorial -----------
 # https://www.youtube.com/watch?v=AsQ8OcVvK3U&ab_channel=Vuka
@@ -142,7 +144,7 @@ def authenticate(auth_code):
 	# refreshing pings the Spotify OAuth2 endpoint again, which changes the acess_code
 	# The access code is then different from what I have in the db
 	# So when I try to refresh it
-	return jwt_access_token
+	return jsonify(jwt_access_token)
 
 
 # create a user route and test that I can get user
@@ -154,16 +156,20 @@ def authenticate(auth_code):
 # then build light frontend, and test with frontend request
 @app.route("/user")
 @jwt_required()
+@cross_origin()
 def get_user():
 	user = get_jwt_identity()
-	print(user)
-	return {"user": user}
+
+	u = User.query.filter_by(user_id=user['user_id']).first()
+
+	return jsonify(u.serialize())
 
 @app.route("/playlists")
 @jwt_required()
 def get_playlists():
 
 	user = get_jwt_identity()
+	print(user)
 
 	# query the database for user
 	u = User.query.filter_by(user_id=user['user_id']).first()
