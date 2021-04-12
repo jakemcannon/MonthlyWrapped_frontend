@@ -79,16 +79,14 @@ def create_authorization_url():
 def callback():
 	auth_code = request.args.get("code")
 	# return token
-	return redirect(url_for('authenticate', auth_code=auth_code))
 
-@app.route("/auth/<auth_code>")
-def authenticate(auth_code):
 	post_data = {
 		"grant_type": "authorization_code", 
 		"code": auth_code, "redirect_uri": redirect_uri, 
 		"client_id": client_id, 
 		"client_secret": client_secret
 	}
+
 	headers = {
 		'Authorization': 'Basic ', 
 		'Content-type':'application/x-www-form-urlencoded', 
@@ -140,12 +138,11 @@ def authenticate(auth_code):
 
 	jwt_access_token = create_access_token(identity={"user_id":user_id})
 
-	# this all works correctly until I go to refresh.
-	# refreshing pings the Spotify OAuth2 endpoint again, which changes the acess_code
-	# The access code is then different from what I have in the db
-	# So when I try to refresh it
-	# return redirect(url_for('home', token=jwt_access_token))
-	return jsonify(jwt_access_token)
+
+	# return redirect(url_for('authenticate', auth_code=auth_code))
+	# return jsonify(jwt_access_token)
+	query_param = "?token=" + jwt_access_token
+	return redirect("http://localhost:3000/content" + query_param, code=302)
 
 
 # create a user route and test that I can get user
