@@ -2,8 +2,29 @@ import React from 'react'
 import Button from 'react-bootstrap/Button';
 import song_image from '../example_songs.png'
 import artist_image from '../example_artists.png'
+import axios from 'axios'
 
 function LandingPage() {
+
+    const [tempAuth, setTempAuth] = ([])
+
+    let myConfig = {
+        headers: {
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "*"
+        }
+     }
+
+    const tempAuthFunc = () => {
+        axios.get('http://127.0.0.1:5000/login', myConfig)
+        .then(res => {
+            window.location = res.data.data
+        })
+        .catch(err => {
+            console.log(err)
+        })
+    }
+
     return (
         <div>
             <h2>Create monthly stories based on your Spotify listening trends </h2>
@@ -16,22 +37,7 @@ function LandingPage() {
                 <img src={artist_image} className="App-photo" />
                 </li>
             </ul>
-            <Button variant="success" onClick={async () => {
-                const r = await fetch("/login", {
-                method: "GET",
-                headers: {
-                    "Content-Type": "application/json",
-                    "Access-Control-Allow-Origin": "*"
-                }
-                }).then(r => 
-                r.json().then(d => {
-                    window.location = d.data
-                    console.log(d.data);
-                }))
-            }}
-            >
-                Login
-            </Button>
+            <Button variant="success" onClick={tempAuthFunc}> Login </Button>
         </div>
     )
 }
