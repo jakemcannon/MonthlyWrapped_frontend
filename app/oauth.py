@@ -144,6 +144,7 @@ def authenticate(auth_code):
 	# refreshing pings the Spotify OAuth2 endpoint again, which changes the acess_code
 	# The access code is then different from what I have in the db
 	# So when I try to refresh it
+	# return redirect(url_for('home', token=jwt_access_token))
 	return jsonify(jwt_access_token)
 
 
