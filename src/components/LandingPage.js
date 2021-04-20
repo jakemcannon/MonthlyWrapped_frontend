@@ -27,7 +27,11 @@ function LandingPage() {
 
     return (
         <div>
-            <h2>Create monthly stories based on your Spotify listening trends </h2>
+            <h1 className="heading">
+                Create monthly stories based on
+                {/* <br></br> */}
+                <span> your Spotify listening trends</span>
+            </h1>
             <p className="sub-heading"> Once a month we will email or text you your official Spotify listening trends for the month </p>
             <ul className="photo-list">
                 <li>
