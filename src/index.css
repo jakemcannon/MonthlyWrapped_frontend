@@ -3,10 +3,14 @@
   src: local('CircularStd-Book'), url('./fonts/CircularStd-Book.ttf'), format('woff2');
 }
 
+@font-face {
+  font-family: 'CircularStd-Bold';
+  src: local('CircularStd-Bold'), url('./fonts/CircularStd-Bold.ttf'), format('woff2');
+}
+
 body {
   margin: 0;
-  font-family: 'CircularStd-Book';
-  /* src: local('CircularStd-Book'), url('./fonts/CircularStd-Book'); */
+  font-family: 'CircularStd-Bold';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
