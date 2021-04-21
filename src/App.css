@@ -1,21 +1,28 @@
-.container{
-  display: flex;
-  flex-direction: column;
+.landing-page{
+  /* display: flex; */
   justify-content: center;
   align-items: center;
   align-content: center;
-  height: 100%;
 }
 
 .heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  font-size: 50px;
+  text-align: center;
   font-family: CircularStd-Bold;
 }
 
-span{
-  color: #5FB536
-}
-
 .sub-heading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  font-family: CircularStd-Book;
+  font-size: 30px;
   color: #6A6767;
 }
 
@@ -32,11 +39,74 @@ span{
   margin: 0 20px;
   list-style: None;
   padding: 0;
+  box-shadow: 0 8px 6px -6px rgb(129, 129, 129);
 }
 
 img{
   width: 300px;
-  /* border: 1px solid green; */
   border-radius: 4px;
-  box-shadow: 0 8px 6px -6px rgb(129, 129, 129);
+  /* box-shadow: 0 8px 6px -6px rgb(129, 129, 129); */
 }
+
+.btn-success {
+  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  color: red;
+}
+
+span{
+  display: contents;
+  color: #5FB536
+}
+
+.justify-content-md-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  background: darkblue;
+}
+
+.login-btn {
+  display: flex;
+  justify-content: center;
+}
+
+/* navbar */
+
+nav{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  min-height: 20vh;
+  color: black;
+  padding: 30px;
+}
+
+.nav-links{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+  color: black;
+}
+
+.nav-links li{
+  font-family: CircularStd-Book;
+  font-size: 20px;
+  color: black;
+}
+
+.nav-img{
+  margin-right: auto;
+  margin-left: -20px;
+}
+
+/* if I use this to edit bootstrap images
+  I end up breaking the logo on the far left
+ */
+/* @import 'bootstrap/dist/css/bootstrap.min.css'; */

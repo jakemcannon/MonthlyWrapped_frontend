@@ -1,8 +1,11 @@
 import React from 'react'
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import song_image from '../example_songs.png'
 import artist_image from '../example_artists.png'
 import axios from 'axios'
+import '../App.css'
 
 function LandingPage() {
 
@@ -26,22 +29,23 @@ function LandingPage() {
     }
 
     return (
-        <div>
+        <div className="landing-page">
             <h1 className="heading">
                 Create monthly stories based on
-                {/* <br></br> */}
                 <span> your Spotify listening trends</span>
             </h1>
             <p className="sub-heading"> Once a month we will email or text you your official Spotify listening trends for the month </p>
             <ul className="photo-list">
                 <li>
-                <img src={song_image} className="App-photo" />
+                <img className="photo-list-image" src={song_image} className="App-photo" />
                 </li>
                 <li>
-                <img src={artist_image} className="App-photo" />
+                <img className="photo-list-image" src={artist_image} className="App-photo" />
                 </li>
             </ul>
+            <div className="login-btn">
             <Button variant="success" onClick={tempAuthFunc}> Login </Button>
+            </div>
         </div>
     )
 }

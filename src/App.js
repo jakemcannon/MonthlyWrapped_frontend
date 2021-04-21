@@ -5,6 +5,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './components/LandingPage.js';
 
+import Nav from './components/Nav.js'
 import LandingPage from './components/LandingPage.js';
 import Content from './components/Content.js'
 import Account from './components/Account.js'
@@ -21,12 +22,13 @@ function App() {
 
   return (
     <Router>
-      <div className="container">
-        <Route path="/" exact component={LandingPage}/>
-        <Route path="/content" component={Content}/>
-        <Route path="/account" component={Account}/>
-        <Route path="/about" component={About}/>
-      </div>
+      <Nav />
+        <Switch>
+          <Route path="/" exact component={LandingPage}/>
+          <Route path="/content" component={Content}/>
+          <Route path="/account" component={Account}/>
+          <Route path="/about" component={About}/>
+        </Switch>
     </Router>
   );
 }
