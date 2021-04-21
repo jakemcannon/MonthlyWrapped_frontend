@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './components/LandingPage.js';
 
 import Nav from './components/Nav.js'
+import Footer from './components/Footer.js'
 import LandingPage from './components/LandingPage.js';
 import Content from './components/Content.js'
 import Account from './components/Account.js'
@@ -29,6 +30,7 @@ function App() {
           <Route path="/account" component={Account}/>
           <Route path="/about" component={About}/>
         </Switch>
+      <Footer />
     </Router>
   );
 }

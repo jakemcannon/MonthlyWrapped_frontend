@@ -44,7 +44,7 @@ function LandingPage() {
                 </li>
             </ul>
             <div className="login-btn">
-            <Button variant="success" onClick={tempAuthFunc}> Login </Button>
+            <Button variant="success shadow-none" onClick={tempAuthFunc}> Login </Button>
             </div>
         </div>
     )
