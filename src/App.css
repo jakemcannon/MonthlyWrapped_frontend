@@ -1,22 +1,35 @@
-.container{
-  display: flex;
-  flex-direction: column;
+.landing-page{
+  margin-left: 100px;
+  margin-right: 100px;
   justify-content: center;
   align-items: center;
   align-content: center;
-  height: 100%;
 }
 
 .heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  font-size: 50px;
   font-family: CircularStd-Bold;
 }
 
-span{
-  color: #5FB536
+.sub-heading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  color: #6A6767;
+  font-size: 30px;
+  font-family: CircularStd-Book;
 }
 
-.sub-heading{
-  color: #6A6767;
+span{
+  display: contents;
+  color: #5FB536
 }
 
 .photo-list{
@@ -29,14 +42,108 @@ span{
 }
 
 .photo-list li {
-  margin: 0 20px;
   list-style: None;
   padding: 0;
+  margin: 0 20px;
+  margin-top: 15px;
+  box-shadow: 0 8px 6px -6px rgb(129, 129, 129);
 }
 
 img{
   width: 300px;
-  /* border: 1px solid green; */
   border-radius: 4px;
-  box-shadow: 0 8px 6px -6px rgb(129, 129, 129);
 }
+
+.btn-success {
+  /* display: block; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  min-height: 60px;
+  min-width: 300px;
+  font-size: 20px;
+  font-family: CircularStd-Bold;
+  background-color: #4475C2 !important;
+  border: 0 !important;
+}
+
+.btn-success:hover {
+  background: #6b98df !important;
+}
+
+.login-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+/* navbar */
+
+nav{
+  /* display: flex; */
+  /* justify-content: flex-end; */
+  /* align-items: center; */
+  color: black;
+  min-height: 20vh;
+  padding: 15px;
+}
+
+.nav-links{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+}
+
+.nav-links li{
+  font-family: CircularStd-Bold;
+  font-size: 25px;
+  color: #313131;
+  transition: all 50ms ease-in;
+}
+
+.nav-links li:hover {
+  color: #535353;
+}
+
+.nav-img{
+  margin-right: auto;
+  margin-left: -20px;
+}
+
+/* footer */
+.footer{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  min-height: 20vh;
+  color: black;
+  padding: 30px;
+}
+
+@media screen and (max-width: 600px) {
+
+  .landing-page {
+    margin-left: 20px;
+  margin-right: 20px;
+  }
+
+  .heading {
+    font-size: 30px;
+  }
+  .sub-heading {
+    font-size: 15px;
+  }
+
+  .nav-links li{
+    font-size: 18px;
+  }
+
+  .nav-img {
+    width: 150px;
+  }
+}
+
+@import 'bootstrap/dist/css/bootstrap.min.css';
