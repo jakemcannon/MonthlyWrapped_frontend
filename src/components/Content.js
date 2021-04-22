@@ -1,4 +1,5 @@
 import React from 'react'
+import Button from 'react-bootstrap/Button';
 
 const images = [
     {id:1, imageName: '1.png'},
@@ -18,6 +19,11 @@ const images = [
 function Content() {
     return (
         <div>
+            <div className="menu">
+                <h1 className="menu-header">Your stories</h1>
+                <Button className="menu-btn" variant="success shadow-none"> Top Songs </Button>
+                <Button className="menu-btn" variant="success shadow-none"> Top Artists </Button>
+            </div>
             <div className="image-grid">
             {images.map(image => 
                 <div key={image.id}>
