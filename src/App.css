@@ -123,11 +123,62 @@ nav{
   padding: 30px;
 }
 
+.image-grid{
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+/* stats image grid */
+.grid-image {
+  display: block;
+  border-radius: 15px;
+  padding: 10px;
+  box-sizing: border-box;
+} 
+
+/* stats page menu */
+.menu {
+  width: 90%;
+  margin: 0 auto;
+  padding-bottom: 40px;
+  text-align: center;
+}
+
+.menu-btn {
+  display: inline-block;
+  margin-right: 10px;
+  margin-left: 10px;
+  min-height: 50px;
+  min-width: 150px;
+  background: transparent !important;
+  color:#5FB536;
+  border-radius: 5px;
+  border: 2px solid #5FB536 !important;
+}
+
+.menu-btn:hover {
+  color: #5FB536 !important;
+  background-color: #e0f3d7 !important;
+}
+
+.menu-btn:focus {
+  color: #5FB536;
+  background-color: none;
+}
+
+.menu-header {
+  font-family: CircularStd-Bold;
+  padding-bottom: 20px;
+}
+
 @media screen and (max-width: 600px) {
 
   .landing-page {
     margin-left: 20px;
-  margin-right: 20px;
+    margin-right: 20px;
   }
 
   .heading {
@@ -144,6 +195,16 @@ nav{
   .nav-img {
     width: 150px;
   }
+
+  .menu-header {
+    font-size: 30px;
+  }
+
+  .menu-btn {
+    min-height: 40px;
+    min-width: 100px;
+  }
+
 }
 
 @import 'bootstrap/dist/css/bootstrap.min.css';
