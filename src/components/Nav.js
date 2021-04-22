@@ -6,7 +6,11 @@ function Nav() {
     return (
         <nav>
             <ul className="nav-links">
-            <img className="nav-img" src={logo} alt='logo'/>
+                <Link className="nav-img" to='/'>
+                    <li>
+                        <img className="nav-img" src={logo} alt='logo'/>
+                    </li>
+                </Link>
                 <Link className="nav-link" to='/about'>
                     <li>About</li>
                 </Link>

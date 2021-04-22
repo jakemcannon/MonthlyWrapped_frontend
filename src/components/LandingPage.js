@@ -1,6 +1,4 @@
 import React from 'react'
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import song_image from '../example_songs.png'
 import artist_image from '../example_artists.png'
