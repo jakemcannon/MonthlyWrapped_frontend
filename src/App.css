@@ -123,6 +123,7 @@ nav{
   padding: 30px;
 }
 
+/* stats image grid */
 .image-grid{
   display: flex;
   justify-content: center;
@@ -131,13 +132,21 @@ nav{
   flex-wrap: wrap;
 }
 
-/* stats image grid */
 .grid-image {
   display: block;
   border-radius: 15px;
   padding: 10px;
   box-sizing: border-box;
+  margin-bottom: 30px;
 } 
+
+.image-grid-header {
+  font-family: CircularStd-Bold;
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
 
 /* stats page menu */
 .menu {
@@ -203,6 +212,10 @@ nav{
   .menu-btn {
     min-height: 40px;
     min-width: 100px;
+  }
+
+  .image-grid-header {
+    font-size: 25px;
   }
 
 }
