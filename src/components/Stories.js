@@ -109,7 +109,7 @@ function Content() {
             <div>
             {
                 data.map((item) => 
-                    <div>
+                    <div key={item.year}>
                         <ImageGrid year={item.year} images={item.months} />
                     </div>
                 )
