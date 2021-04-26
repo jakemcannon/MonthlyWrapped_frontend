@@ -8,7 +8,7 @@ import './components/LandingPage.js';
 import Nav from './components/Nav.js'
 import Footer from './components/Footer.js'
 import LandingPage from './components/LandingPage.js';
-import Content from './components/Content.js'
+import Stories from './components/Stories.js'
 import Account from './components/Account.js'
 import About from './components/About.js'
 
@@ -26,7 +26,7 @@ function App() {
       <Nav />
         <Switch>
           <Route path="/" exact component={LandingPage}/>
-          <Route path="/content" component={Content}/>
+          <Route path="/stories" component={Stories}/>
           <Route path="/account" component={Account}/>
           <Route path="/about" component={About}/>
         </Switch>
