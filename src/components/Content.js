@@ -63,45 +63,6 @@ const a_images = [
     }
 ]
 
-
-const s_img = {
-    "2021": [
-        {id:1, imageName: 'december.png'},
-        {id:2, imageName: 'november.png'},
-        {id:3, imageName: 'october.png'},
-        {id:4, imageName: 'september.png'},
-        {id:5, imageName: 'august.png'},
-        {id:6, imageName: 'july.png'},
-        {id:7, imageName: 'june.png'},
-        {id:8, imageName: 'may.png'},
-        {id:9, imageName: 'april.png'},
-        {id:10, imageName: 'march.png'},
-        {id:11, imageName: 'february.png'},
-        {id:12, imageName: 'january.png'},
-    ],
-    "2020": [
-        {id:1, imageName: 'january.png'},
-    ],
-    "2019": [
-        {id:1, imageName: 'january.png'},
-    ]
-}
-
-const s = [
-    {id:1, imageName: 'december.png'},
-    {id:2, imageName: 'november.png'},
-    {id:3, imageName: 'october.png'},
-    {id:4, imageName: 'september.png'},
-    {id:5, imageName: 'august.png'},
-    {id:6, imageName: 'july.png'},
-    {id:7, imageName: 'june.png'},
-    {id:8, imageName: 'may.png'},
-    {id:9, imageName: 'april.png'},
-    {id:10, imageName: 'march.png'},
-    {id:11, imageName: 'february.png'},
-    {id:12, imageName: 'january.png'},
-]
-
 function Content() {
 
     const [songs, setSongs] = useState([])
