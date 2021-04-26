@@ -1,12 +1,13 @@
 import React, {useState, useEffect } from 'react'
 import Button from 'react-bootstrap/Button';
 import ImageGrid from './ImageGrid'
+import axios from 'axios'
 
 const s_images = [
     {
         "year": "2021",
         months: [
-            {'month':'may.png'}
+            {'month':'05.png'}
         ]
     },
     {
@@ -103,14 +104,46 @@ const s = [
 
 function Content() {
 
-    const [data, setData] = useState(s_images)
+    const [songs, setSongs] = useState([])
+    const [artists, setArtists] = useState([])
+    const [data, setData] = useState(songs)
+
+    useEffect(() => {
+
+        axios.get('http://127.0.0.1:5000/songs')
+        .then(res => {
+            setSongs(res.data)
+        })
+        .catch(err => {
+            console.log(err)
+        })
+    }, [])
+
+    // the current issue is that the first visit of a renders a blank page for the stories page
+    // by adding this we say
+    // if the songs variable has changed, also change the data variable
+    useEffect(() => {
+        setData(songs)
+    }, [songs])
+
+    useEffect(() => {
+
+        axios.get('http://127.0.0.1:5000/artists')
+        .then(res => {
+            setArtists(res.data)
+        })
+        .catch(err => {
+            console.log(err)
+        })
+
+    }, [])
 
     return (
         <div>
             <div className="menu">
                 <h1 className="menu-header">Your stories</h1>
-                <Button onClick={() => setData(s_images)}  className="menu-btn" variant="success shadow-none"> Top Songs </Button>
-                <Button onClick={() => setData(a_images)} className="menu-btn" variant="success shadow-none"> Top Artists </Button>
+                <Button onClick={() => setData(songs)}  className="menu-btn" variant="success shadow-none"> Top Songs </Button>
+                <Button onClick={() => setData(artists)} className="menu-btn" variant="success shadow-none"> Top Artists </Button>
             </div>
             <div>
             {
