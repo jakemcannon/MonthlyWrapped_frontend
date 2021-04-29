@@ -7,8 +7,9 @@ import uuid
 import requests
 import urllib
 import json	
-from flask import Flask, abort, request, redirect, session, url_for, jsonify
 
+import boto3
+from flask import Flask, abort, request, redirect, session, url_for, jsonify
 from flask_jwt_extended import JWTManager, jwt_required, create_access_token, get_jwt_identity
 from flask_cors import CORS, cross_origin
 
@@ -22,6 +23,7 @@ client_id = config.sp_client_id
 client_secret = config.sp_client_secret
 redirect_uri = config.sp_redirect_uri
 scope =  config.sp_scope
+bucket_name = config.bucket_name
 
 db_filename = "monthlywrapped.db"
 
@@ -38,6 +40,8 @@ with app.app_context():
 
 jwt = JWTManager(app)
 CORS(app)
+
+client = boto3.client('s3', aws_access_key_id = config.api_key, aws_secret_access_key = config.api_secret)
 
 # ----------- This toy example works based off the following tutorial -----------
 # https://www.youtube.com/watch?v=AsQ8OcVvK3U&ab_channel=Vuka
@@ -177,6 +181,85 @@ def get_playlists():
 	headers = {'Authorization': f"Bearer {u.access_token}", 'Accept':'application/json','Content-Type': 'application/json'}
 	playlists_resp = requests.get('https://api.spotify.com/v1/me/playlists', headers=headers)
 	return {"data": playlists_resp.json()}
+
+
+# stats page routes
+
+def get_signed_url(bucket_name, file_name, exp_seconds):
+	return client.generate_presigned_url(
+		ClientMethod='get_object',
+		Params={
+			'Bucket': bucket_name,
+			'Key': file_name,
+            'ResponseExpires': exp_seconds,
+        })
+
+
+@app.route("/songs")
+def get_songs():
+
+	result = []
+	urls = []
+	prev_year = None
+	try:
+		# this prefix will need to change to include user uuid
+		for item in client.list_objects(Bucket=bucket_name, Prefix = 'user1/songs')['Contents']:
+			key = item['Key']
+			if key.endswith('.png'):
+
+				# this slice will need to be updated when users switch to uuid
+				year = str(key[12:16])
+
+				# this is a gross solution
+				if prev_year == None:
+					prev_year = year
+
+				if prev_year != year:
+					result.insert(0, {"year": prev_year, "months": urls})
+					prev_year = year
+					urls = []
+					urls.append({"month": get_signed_url(bucket_name, key, 60)})
+				else:
+					urls.append({"month": get_signed_url(bucket_name, key, 60)})
+
+		result.insert(0, {"year": prev_year, "months": urls})
+	except KeyError:
+		pass
+
+	return jsonify(result)
+
+@app.route("/artists")
+def get_artists():
+
+	result = []
+	urls = []
+	prev_year = None
+	try:
+		# this prefix will need to change to include user uuid
+		for item in client.list_objects(Bucket=bucket_name, Prefix = 'user1/artists')['Contents']:
+			key = item['Key']
+			if key.endswith('.png'):
+
+				# this slice will need to be updated when users switch to uuid
+				year = str(key[14:18])
+
+				# this is a gross solution
+				if prev_year == None:
+					prev_year = year
+
+				if prev_year != year:
+					result.insert(0, {"year": prev_year, "months": urls})
+					prev_year = year
+					urls = []
+					urls.append({"month": get_signed_url(bucket_name, key, 60)})
+				else:
+					urls.append({"month": get_signed_url(bucket_name, key, 60)})
+
+		result.insert(0, {"year": prev_year, "months": urls})
+	except KeyError:
+		pass
+
+	return jsonify(result)
 
 
 if __name__ == '__main__':
