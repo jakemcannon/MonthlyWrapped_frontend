@@ -196,6 +196,7 @@ def get_signed_url(bucket_name, file_name, exp_seconds):
 
 
 @app.route("/songs")
+@jwt_required()
 def get_songs():
 
 	result = []
@@ -229,6 +230,7 @@ def get_songs():
 	return jsonify(result)
 
 @app.route("/artists")
+@jwt_required()
 def get_artists():
 
 	result = []

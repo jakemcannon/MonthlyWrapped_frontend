@@ -71,7 +71,9 @@ function Content() {
 
     useEffect(() => {
 
-        axios.get('http://127.0.0.1:5000/songs')
+        axios.get('http://127.0.0.1:5000/songs', {
+            headers: {'Authorization': 'Bearer token_goes_here'}
+        })
         .then(res => {
             setSongs(res.data)
         })
@@ -89,7 +91,9 @@ function Content() {
 
     useEffect(() => {
 
-        axios.get('http://127.0.0.1:5000/artists')
+        axios.get('http://127.0.0.1:5000/artists', {
+            headers: {'Authorization': 'Bearer token_goes_here'}
+        })
         .then(res => {
             setArtists(res.data)
         })
