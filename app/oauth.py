@@ -146,7 +146,7 @@ def callback():
 	# return redirect(url_for('authenticate', auth_code=auth_code))
 	# return jsonify(jwt_access_token)
 	query_param = "?token=" + jwt_access_token
-	return redirect("http://localhost:3000/content" + query_param, code=302)
+	return redirect("http://localhost:3000/cred" + query_param, code=302)
 
 
 # create a user route and test that I can get user

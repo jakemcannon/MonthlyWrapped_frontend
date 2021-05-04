@@ -10,7 +10,7 @@ SongData = namedtuple('SongStory', ['songs', 'artists', 'images'])
 
 def create_artist_story_data():
 
-	with open('artists2.json') as f:
+	with open('artists3.json') as f:
 		data = json.load(f)
 
 	artists = [artist["name"] for artist in data["items"]]
@@ -35,7 +35,7 @@ def create_artist_story_data():
 
 def create_song_story_data():
 
-	with open('songs2.json') as f:
+	with open('songs3.json') as f:
 			data = json.load(f)
 
 	songs = [data["items"][i]["name"] for i in range(10)]

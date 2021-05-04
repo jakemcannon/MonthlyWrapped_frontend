@@ -1,7 +1,10 @@
-import React, {useState, useEffect } from 'react'
-import Button from 'react-bootstrap/Button';
-import ImageGrid from './ImageGrid'
+import React, {useState, useEffect} from 'react'
 import axios from 'axios'
+import Button from 'react-bootstrap/Button';
+import Auth from '../utils/Auth.js'
+import ImageGrid from './ImageGrid'
+
+
 
 const s_images = [
     {
@@ -69,10 +72,13 @@ function Content() {
     const [artists, setArtists] = useState([])
     const [data, setData] = useState(songs)
 
+    const token = Auth.get()
+    console.log("my token is now coming from Auth service")
+    console.log(token)
     useEffect(() => {
 
         axios.get('http://127.0.0.1:5000/songs', {
-            headers: {'Authorization': 'Bearer token_goes_here'}
+            headers: {'Authorization': token}
         })
         .then(res => {
             setSongs(res.data)
@@ -92,7 +98,7 @@ function Content() {
     useEffect(() => {
 
         axios.get('http://127.0.0.1:5000/artists', {
-            headers: {'Authorization': 'Bearer token_goes_here'}
+            headers: {'Authorization': token}
         })
         .then(res => {
             setArtists(res.data)

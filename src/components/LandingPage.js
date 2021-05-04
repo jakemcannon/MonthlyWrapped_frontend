@@ -5,9 +5,10 @@ import artist_image from '../example_artists.png'
 import axios from 'axios'
 import '../App.css'
 
+import Auth from '../utils/Auth.js'
+
 function LandingPage() {
 
-    const [tempAuth, setTempAuth] = ([])
 
     let myConfig = {
         headers: {
@@ -35,10 +36,10 @@ function LandingPage() {
             <p className="sub-heading"> Once a month we will email or text you your official Spotify listening trends for the month </p>
             <ul className="photo-list">
                 <li>
-                <img className="photo-list-image" src={song_image} className="App-photo" />
+                <img className="photo-list-image" src={song_image} className="App-photo" alt="" />
                 </li>
                 <li>
-                <img className="photo-list-image" src={artist_image} className="App-photo" />
+                <img className="photo-list-image" src={artist_image} className="App-photo" alt="" />
                 </li>
             </ul>
             <div className="login-btn">

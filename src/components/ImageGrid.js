@@ -6,7 +6,7 @@ const ImageGrid = (props) => (
         <div className="image-grid">
             {props.images.map(image => 
                 <div key={image.month}>
-                    <img className="grid-image" src={image.month} alt="image"/>
+                    <img className="grid-image" src={image.month} alt=""/>
                 </div>  
             )}
             

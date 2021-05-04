@@ -11,6 +11,8 @@ import LandingPage from './components/LandingPage.js';
 import Stories from './components/Stories.js'
 import Account from './components/Account.js'
 import About from './components/About.js'
+import Cred from './components/Cred.js'
+import PrivateRoute from './components/PrivateRoute.js'
 
 function App() {
 
@@ -25,10 +27,11 @@ function App() {
     <Router>
       <Nav />
         <Switch>
-          <Route path="/" exact component={LandingPage}/>
-          <Route path="/stories" component={Stories}/>
+        <Route path="/" exact component={LandingPage}/>
+          <PrivateRoute path="/stories" component={Stories}/>
           <Route path="/account" component={Account}/>
           <Route path="/about" component={About}/>
+          <Route path="/cred" component={Cred}/>
         </Switch>
       <Footer />
     </Router>

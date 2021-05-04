@@ -1,0 +1,293 @@
+{
+  "items" : [ {
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/artist/5DslL3PUa3BcRlCCEP64A4"
+    },
+    "followers" : {
+      "href" : null,
+      "total" : 4252
+    },
+    "genres" : [ ],
+    "href" : "https://api.spotify.com/v1/artists/5DslL3PUa3BcRlCCEP64A4",
+    "id" : "5DslL3PUa3BcRlCCEP64A4",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/ab6761610000e5ebd94bb0415ae8a89e8c86ca31",
+      "width" : 640
+    }, {
+      "height" : 320,
+      "url" : "https://i.scdn.co/image/ab67616100005174d94bb0415ae8a89e8c86ca31",
+      "width" : 320
+    }, {
+      "height" : 160,
+      "url" : "https://i.scdn.co/image/ab6761610000f178d94bb0415ae8a89e8c86ca31",
+      "width" : 160
+    } ],
+    "name" : "The Hellp",
+    "popularity" : 33,
+    "type" : "artist",
+    "uri" : "spotify:artist:5DslL3PUa3BcRlCCEP64A4"
+  }, {
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/artist/0WPY9nnBy01s5QOt4o4oQX"
+    },
+    "followers" : {
+      "href" : null,
+      "total" : 156606
+    },
+    "genres" : [ "alternative rock", "britpop", "dream pop", "new wave", "noise pop", "nu gaze", "oxford indie", "shoegaze" ],
+    "href" : "https://api.spotify.com/v1/artists/0WPY9nnBy01s5QOt4o4oQX",
+    "id" : "0WPY9nnBy01s5QOt4o4oQX",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/ef0a9db6137fb1ade8af6a94832c20b33f18d685",
+      "width" : 640
+    }, {
+      "height" : 320,
+      "url" : "https://i.scdn.co/image/aa3e2b936f01a76f3f0a6d8966d0c167236c4855",
+      "width" : 320
+    }, {
+      "height" : 160,
+      "url" : "https://i.scdn.co/image/45c1c6425bef728b588823a0a4f082ac558c32ef",
+      "width" : 160
+    } ],
+    "name" : "Ride",
+    "popularity" : 52,
+    "type" : "artist",
+    "uri" : "spotify:artist:0WPY9nnBy01s5QOt4o4oQX"
+  }, {
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/artist/3r94PF71LWRI5K6wqclNjQ"
+    },
+    "followers" : {
+      "href" : null,
+      "total" : 35939
+    },
+    "genres" : [ "alternative rock", "c86", "dream pop", "dreamgaze", "nu gaze", "reading indie", "shoegaze" ],
+    "href" : "https://api.spotify.com/v1/artists/3r94PF71LWRI5K6wqclNjQ",
+    "id" : "3r94PF71LWRI5K6wqclNjQ",
+    "images" : [ {
+      "height" : 750,
+      "url" : "https://i.scdn.co/image/e00fcc7f12f99031c4ea6c4970d5116928c9d195",
+      "width" : 1000
+    }, {
+      "height" : 480,
+      "url" : "https://i.scdn.co/image/1bd3cb9bacdf76cd5339a4b78dd69205666118cd",
+      "width" : 640
+    }, {
+      "height" : 150,
+      "url" : "https://i.scdn.co/image/152206e6f78f57ee06d1b772e8c95ecb6c9b0e0c",
+      "width" : 200
+    }, {
+      "height" : 48,
+      "url" : "https://i.scdn.co/image/da932b7df3cc7337997e08779b5d6123829ade26",
+      "width" : 64
+    } ],
+    "name" : "Chapterhouse",
+    "popularity" : 40,
+    "type" : "artist",
+    "uri" : "spotify:artist:3r94PF71LWRI5K6wqclNjQ"
+  }, {
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/artist/2bgBTY9LvajPhwkPoyLGH7"
+    },
+    "followers" : {
+      "href" : null,
+      "total" : 3915
+    },
+    "genres" : [ ],
+    "href" : "https://api.spotify.com/v1/artists/2bgBTY9LvajPhwkPoyLGH7",
+    "id" : "2bgBTY9LvajPhwkPoyLGH7",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/78c6660e4acd38669c3add061fcaf629802ca605",
+      "width" : 640
+    }, {
+      "height" : 320,
+      "url" : "https://i.scdn.co/image/6aacb881220f5f9e3c10f93774069fec4d929e1d",
+      "width" : 320
+    }, {
+      "height" : 160,
+      "url" : "https://i.scdn.co/image/8c5479b7a96b59736cc3781b19e7c566945b3daf",
+      "width" : 160
+    } ],
+    "name" : "KFC Murder Chicks",
+    "popularity" : 31,
+    "type" : "artist",
+    "uri" : "spotify:artist:2bgBTY9LvajPhwkPoyLGH7"
+  }, {
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/artist/3psutwIiyR5tfTM1TTNxFv"
+    },
+    "followers" : {
+      "href" : null,
+      "total" : 8057
+    },
+    "genres" : [ "bubblegrunge", "indie punk", "indie rock" ],
+    "href" : "https://api.spotify.com/v1/artists/3psutwIiyR5tfTM1TTNxFv",
+    "id" : "3psutwIiyR5tfTM1TTNxFv",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/a08ffc6c639009a3c3ad334e6d7f870601549370",
+      "width" : 640
+    }, {
+      "height" : 320,
+      "url" : "https://i.scdn.co/image/fabf6b0cd3ab04053ab6b5dec22fc1305406e24e",
+      "width" : 320
+    }, {
+      "height" : 160,
+      "url" : "https://i.scdn.co/image/cafb4baa2de6a0bd7295e71e38738ed3f16a7dfc",
+      "width" : 160
+    } ],
+    "name" : "Strange Ranger",
+    "popularity" : 27,
+    "type" : "artist",
+    "uri" : "spotify:artist:3psutwIiyR5tfTM1TTNxFv"
+  }, {
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/artist/3G3Gdm0ZRAOxLrbyjfhii5"
+    },
+    "followers" : {
+      "href" : null,
+      "total" : 410663
+    },
+    "genres" : [ "alternative rock", "art rock", "dream pop", "noise pop", "nu gaze", "rock", "shoegaze" ],
+    "href" : "https://api.spotify.com/v1/artists/3G3Gdm0ZRAOxLrbyjfhii5",
+    "id" : "3G3Gdm0ZRAOxLrbyjfhii5",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/e805258e9d8b8403095149490144b5e10500712e",
+      "width" : 640
+    }, {
+      "height" : 320,
+      "url" : "https://i.scdn.co/image/e558d0a8d9c4e65addf950f85c051d8bdcb4c776",
+      "width" : 320
+    }, {
+      "height" : 160,
+      "url" : "https://i.scdn.co/image/898532c184c7509830efd96cf7ef16af5c2be576",
+      "width" : 160
+    } ],
+    "name" : "my bloody valentine",
+    "popularity" : 64,
+    "type" : "artist",
+    "uri" : "spotify:artist:3G3Gdm0ZRAOxLrbyjfhii5"
+  }, {
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/artist/267VY6GX5LyU5c9M85ECZQ"
+    },
+    "followers" : {
+      "href" : null,
+      "total" : 374138
+    },
+    "genres" : [ "alternative pop", "alternative rock", "grunge", "indie rock", "lo-fi", "modern rock", "noise pop", "noise rock", "permanent wave", "post-hardcore", "post-punk", "power pop", "punk", "rock" ],
+    "href" : "https://api.spotify.com/v1/artists/267VY6GX5LyU5c9M85ECZQ",
+    "id" : "267VY6GX5LyU5c9M85ECZQ",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/0886ccb2ca3460defae0cb43616fbdc853da6797",
+      "width" : 640
+    }, {
+      "height" : 320,
+      "url" : "https://i.scdn.co/image/d5c7de86b83ff36736ea2e781d142f1dfc40c485",
+      "width" : 320
+    }, {
+      "height" : 160,
+      "url" : "https://i.scdn.co/image/b2e3df1a9fac336791fe1f08306de3bcf15753fb",
+      "width" : 160
+    } ],
+    "name" : "Dinosaur Jr.",
+    "popularity" : 62,
+    "type" : "artist",
+    "uri" : "spotify:artist:267VY6GX5LyU5c9M85ECZQ"
+  }, {
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/artist/4rjlerN21ygkIhmUv55irs"
+    },
+    "followers" : {
+      "href" : null,
+      "total" : 333380
+    },
+    "genres" : [ "alternative rock", "art rock", "new wave", "noise pop", "nu gaze", "post-punk", "rock", "scottish indie", "shoegaze", "uk post-punk" ],
+    "href" : "https://api.spotify.com/v1/artists/4rjlerN21ygkIhmUv55irs",
+    "id" : "4rjlerN21ygkIhmUv55irs",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/72f221cbe61196ee0755f8bab9e742d1f5668d44",
+      "width" : 640
+    }, {
+      "height" : 320,
+      "url" : "https://i.scdn.co/image/7134f3041e86bb30a1aa8f4bfba012120c754012",
+      "width" : 320
+    }, {
+      "height" : 160,
+      "url" : "https://i.scdn.co/image/1cc42c6a99b8cea61051fb6ab81abbe73aa0c1cc",
+      "width" : 160
+    } ],
+    "name" : "The Jesus and Mary Chain",
+    "popularity" : 58,
+    "type" : "artist",
+    "uri" : "spotify:artist:4rjlerN21ygkIhmUv55irs"
+  }, {
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/artist/1G5v3lpMz7TeoW0yGpRQHr"
+    },
+    "followers" : {
+      "href" : null,
+      "total" : 49895
+    },
+    "genres" : [ "chillwave", "vaporwave" ],
+    "href" : "https://api.spotify.com/v1/artists/1G5v3lpMz7TeoW0yGpRQHr",
+    "id" : "1G5v3lpMz7TeoW0yGpRQHr",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/4d828fbea318c8e0952b2c22f7151a2cdcecb3ed",
+      "width" : 640
+    }, {
+      "height" : 320,
+      "url" : "https://i.scdn.co/image/2fccc9e0708b7d74c85a46f635b8944625e5472d",
+      "width" : 320
+    }, {
+      "height" : 160,
+      "url" : "https://i.scdn.co/image/01ff3cf6906e72acb6096e49e7e4e8336b291bc5",
+      "width" : 160
+    } ],
+    "name" : "George Clanton",
+    "popularity" : 53,
+    "type" : "artist",
+    "uri" : "spotify:artist:1G5v3lpMz7TeoW0yGpRQHr"
+  }, {
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/artist/335TWGWGFan4vaacJzSiU8"
+    },
+    "followers" : {
+      "href" : null,
+      "total" : 56541
+    },
+    "genres" : [ "art pop", "deconstructed club", "electropop", "escape room", "hyperpop" ],
+    "href" : "https://api.spotify.com/v1/artists/335TWGWGFan4vaacJzSiU8",
+    "id" : "335TWGWGFan4vaacJzSiU8",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/f6521962d0d205684b2d71e646023ff50d7da07f",
+      "width" : 640
+    }, {
+      "height" : 320,
+      "url" : "https://i.scdn.co/image/87ff366491b71017efd390a51faffc1e5575f875",
+      "width" : 320
+    }, {
+      "height" : 160,
+      "url" : "https://i.scdn.co/image/f5c21ea0d704762485d0278ff715c5b2581fa7ad",
+      "width" : 160
+    } ],
+    "name" : "A. G. Cook",
+    "popularity" : 53,
+    "type" : "artist",
+    "uri" : "spotify:artist:335TWGWGFan4vaacJzSiU8"
+  } ],
+  "total" : 50,
+  "limit" : 10,
+  "offset" : 0,
+  "href" : "https://api.spotify.com/v1/me/top/artists?limit=10&offset=0&time_range=short_term",
+  "previous" : null,
+  "next" : "https://api.spotify.com/v1/me/top/artists?limit=10&offset=10&time_range=short_term"
+}
