@@ -15,14 +15,6 @@ import Cred from './components/Cred.js'
 import PrivateRoute from './components/PrivateRoute.js'
 
 function App() {
-
-  // useEffect(() => {
-  //   fetch('/home').then(response => 
-  //     response.json().then(data => {
-  //       console.log(data);
-  //   }))
-  // }, [])
-
   return (
     <Router>
       <Nav />
@@ -39,18 +31,3 @@ function App() {
 }
 
 export default App;
-
-
-// return (
-//   <div className="App">
-//     <img src={logo} className="App-photo" alt="logo" />
-//     <HomePage />
-//      <h2>
-//        Create monthly Instagram stories based on your Spotify listening trends
-//      </h2>
-//      <p>
-//        Once a month we will email or text you your official Spotify listening trends for the month
-//      </p>
-//  </div>
-// );
-// }

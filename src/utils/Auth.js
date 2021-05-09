@@ -4,7 +4,14 @@ import { isEmpty } from 'lodash';
 const auth = {
 
     isAuthenticated() {
-        return false
+
+        const token = localStorage.getItem('token')
+
+        if (!token) {
+            console.log("Token does not exist")
+            return false
+        }
+        return true
     },
 
     tokenExp() {
@@ -20,14 +27,11 @@ const auth = {
             return null;
           }
 
-        console.log("hitting my auth service code")
         return localStorage.setItem('token', 'Bearer ' + value)
     },
 
     get() {
         const token = localStorage.getItem('token')
-        console.log("hitting my auth service from get () method the token is...")
-        console.log(token)
         return token
     }
 

@@ -1,5 +1,6 @@
 import React from 'react'
 import Button from 'react-bootstrap/Button';
+import { Redirect } from 'react-router-dom';
 import song_image from '../example_songs.png'
 import artist_image from '../example_artists.png'
 import axios from 'axios'
@@ -9,6 +10,10 @@ import Auth from '../utils/Auth.js'
 
 function LandingPage() {
 
+    if (Auth.isAuthenticated()) {
+        return(<Redirect to="/stories" />)
+    }
+
 
     let myConfig = {
         headers: {
@@ -17,7 +22,7 @@ function LandingPage() {
         }
      }
 
-    const tempAuthFunc = () => {
+    const login = () => {
         axios.get('http://127.0.0.1:5000/login', myConfig)
         .then(res => {
             window.location = res.data.data
@@ -43,7 +48,7 @@ function LandingPage() {
                 </li>
             </ul>
             <div className="login-btn">
-            <Button variant="success shadow-none" onClick={tempAuthFunc}> Login </Button>
+            <Button variant="success shadow-none" onClick={login}> Login </Button>
             </div>
         </div>
     )

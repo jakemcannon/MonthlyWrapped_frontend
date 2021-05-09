@@ -4,18 +4,17 @@ import Auth from '../utils/Auth.js'
 function Cred() {
 
     // this is a hook, can't use conditionally
-    const search = useLocation().search
+    const url_token = useLocation().search
 
-    console.log(search)
-    console.log("^ searchhhhhh")
-    if (search === "") {
-        const token = Auth.get()
-        if (!token) {
+    // get token from LocalStorage
+    if (url_token === "") {
+        const bearer_token = Auth.get()
+        if (!bearer_token) { // TODO or expired
             return(<Redirect to='/'/>)
         }
     } else {
-        const token = new URLSearchParams(search).get('token')
-        Auth.set(token)
+        const bearer_token = new URLSearchParams(url_token).get('token')
+        Auth.set(bearer_token)
     }
     return (<Redirect to='/stories'/>
     )

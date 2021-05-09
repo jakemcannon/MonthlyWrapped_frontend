@@ -4,68 +4,6 @@ import Button from 'react-bootstrap/Button';
 import Auth from '../utils/Auth.js'
 import ImageGrid from './ImageGrid'
 
-
-
-const s_images = [
-    {
-        "year": "2021",
-        months: [
-            {'month':'05.png'}
-        ]
-    },
-    {
-        "year": "2020",
-        months: [
-            {'month':'may.png'},
-            {'month':'october.png'},
-            {'month':'september.png'}
-        ]
-    },
-    {
-        "year": "2019",
-        months: [
-            {'month':'december.png'},
-            {'month':'november.png'},
-            {'month':'october.png'},
-            {'month':'september.png'},
-            {'month':'august.png'},
-            {'month':'july.png'},
-            {'month':'june.png'},
-            {'month':'may.png'},
-        ]
-    }
-]
-
-const a_images = [
-    {
-        "year": "2021",
-        months: [
-            {'month':'may.png'}
-        ]
-    },
-    {
-        "year": "2020",
-        months: [
-            {'month':'may.png'},
-            {'month':'october.png'},
-            {'month':'september.png'}
-        ]
-    },
-    {
-        "year": "2019",
-        months: [
-            {'month':'december.png'},
-            {'month':'november.png'},
-            {'month':'october.png'},
-            {'month':'september.png'},
-            {'month':'august.png'},
-            {'month':'july.png'},
-            {'month':'june.png'},
-            {'month':'may.png'},
-        ]
-    }
-]
-
 function Content() {
 
     const [songs, setSongs] = useState([])
@@ -73,8 +11,6 @@ function Content() {
     const [data, setData] = useState(songs)
 
     const token = Auth.get()
-    console.log("my token is now coming from Auth service")
-    console.log(token)
     useEffect(() => {
 
         axios.get('http://127.0.0.1:5000/songs', {
