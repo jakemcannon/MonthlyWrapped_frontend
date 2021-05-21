@@ -14,6 +14,10 @@ const auth = {
         return true
     },
 
+    verifiedEmail() {
+        return true
+    },
+    
     tokenExp() {
 
         const token = auth.get()

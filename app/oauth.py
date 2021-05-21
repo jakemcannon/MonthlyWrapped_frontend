@@ -138,9 +138,12 @@ def callback():
 		db.session.add(new_user)
 		db.session.commit()
 	verified_user = User.query.filter_by().first()
-	print(verified_user)
+	# TODO
+	# TODO
+	# We need conditional logic here to create a jwt with or without the email 
+	# boolean set depending on if there is an email in the database
 
-	jwt_access_token = create_access_token(identity={"user_id":user_id})
+	jwt_access_token = create_access_token(identity={"user_id":user_id, "email": False})
 
 
 	# return redirect(url_for('authenticate', auth_code=auth_code))
@@ -165,6 +168,22 @@ def get_user():
 	u = User.query.filter_by(user_id=user['user_id']).first()
 
 	return jsonify(u.serialize())
+
+@app.route("/email", methods=["GET", "POST"])
+@jwt_required()
+def set_email():
+
+	user = get_jwt_identity()
+	print(user)
+
+	# update user email filed in database
+	# if successful, a new jwt needs to be created with {..., email: true}
+
+	if request.method == "POST":
+		print("recieved post request")
+		print(request.data)
+	return "hello from email route"
+
 
 @app.route("/playlists")
 @jwt_required()

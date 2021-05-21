@@ -4,6 +4,8 @@ import Button from 'react-bootstrap/Button';
 import Auth from '../utils/Auth.js'
 import ImageGrid from './ImageGrid'
 
+import { Redirect } from 'react-router-dom';
+
 function Content() {
 
     const [songs, setSongs] = useState([])
@@ -44,6 +46,11 @@ function Content() {
         })
 
     }, [])
+
+    if (Auth.isAuthenticated() && !Auth.verifiedEmail()) {
+        console.log(Auth.verifiedEmail())
+        return(<Redirect to="/register" />)
+    }
 
     return (
         <div>

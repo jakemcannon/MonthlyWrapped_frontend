@@ -183,6 +183,21 @@ nav{
   padding-bottom: 20px;
 }
 
+/* register page  */
+
+.register-page {
+  margin-left: 100px;
+  margin-right: 100px;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.register-text {
+  /* text-align: center; */
+  font-size: 30px;
+}
+
 @media screen and (max-width: 600px) {
 
   .landing-page {
@@ -216,6 +231,7 @@ nav{
 
   .image-grid-header {
     font-size: 25px;
+    font-size: 100px;
   }
 
 }
