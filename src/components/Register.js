@@ -49,15 +49,3 @@ function Register() {
 }
 
 export default Register
-
-// {/* {errors?.email && <ErrorMessage message={errors.email.message} />} */}
-
-// this is what is breaking the entire form
-// {...register("email", {
-//     required: "Email is required.", 
-//     pattern: {
-//         value: /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/,
-//         message: "Please enter a valid email"
-//     }
-//     }
-// )}

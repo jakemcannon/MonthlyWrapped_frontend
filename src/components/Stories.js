@@ -34,7 +34,6 @@ function Content() {
     }, [songs])
 
     useEffect(() => {
-
         axios.get('http://127.0.0.1:5000/artists', {
             headers: {'Authorization': token}
         })
@@ -47,6 +46,10 @@ function Content() {
 
     }, [])
 
+    // I think this is our issue... ? maybe
+    // when user has never entered an email,
+    // this conditional has to go at the bottom,
+    // However, the hooks above attempt to run and get interupted
     if (Auth.isAuthenticated() && !Auth.verifiedEmail()) {
         console.log(Auth.verifiedEmail())
         return(<Redirect to="/register" />)

@@ -1,4 +1,5 @@
 import { isEmpty } from 'lodash';
+import jwt_decode from "jwt-decode";
 
 
 const auth = {
@@ -15,12 +16,20 @@ const auth = {
     },
 
     verifiedEmail() {
-        return true
+
+        const token = localStorage.getItem('token')
+        let decoded = jwt_decode(token)
+
+        if (decoded.sub.email) {
+            return true
+        }
+        
+        return false
     },
-    
+
     tokenExp() {
 
-        const token = auth.get()
+        // const token = auth.get()
         // let decodedToken = jwt.decode(token, {complete: true})
         
 
