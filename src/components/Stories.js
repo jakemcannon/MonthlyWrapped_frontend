@@ -51,7 +51,6 @@ function Content() {
     // this conditional has to go at the bottom,
     // However, the hooks above attempt to run and get interupted
     if (Auth.isAuthenticated() && !Auth.verifiedEmail()) {
-        console.log(Auth.verifiedEmail())
         return(<Redirect to="/register" />)
     }
 

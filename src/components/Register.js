@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import axios from 'axios'
 import { Redirect } from 'react-router-dom';
 
@@ -6,12 +6,14 @@ import Auth from '../utils/Auth.js'
 
 function Register() {
 
+    const [redirect, setRedirect] = useState();
+
     if (Auth.isAuthenticated() && Auth.verifiedEmail()) {
-        console.log(Auth.verifiedEmail())
         return(<Redirect to="/stories" />)
     }
 
     const token = Auth.get()
+
     let myConfig = {
         headers: {
             "Authorization": token,
@@ -21,13 +23,19 @@ function Register() {
      }
 
     const setEmail = () => {
-        axios.post('http://127.0.0.1:5000/email', {email:"test@email.com"} , myConfig)
+        // todo, update with form data
+        axios.post('http://127.0.0.1:5000/email', {email:'test@gmail.com'} , myConfig)
         .then(res => {
-            console.log(res.data)
+            Auth.set(res.data)
+            setRedirect('/stories')
         })
         .catch(err => {
             console.log(err)
         })
+    }
+
+    if (redirect) {
+        return <Redirect to="{redirect}" />
     }
 
     return (
@@ -42,8 +50,8 @@ function Register() {
                     type="text"
                     placeholder="Email"
                     name="email"
-                />
-                <button onClick={setEmail}>Submit Email</button>
+            />
+            <button onClick={setEmail}>Submit Email</button>
         </div>
     )
 }

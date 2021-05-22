@@ -9,7 +9,6 @@ const auth = {
         const token = localStorage.getItem('token')
 
         if (!token) {
-            console.log("Token does not exist")
             return false
         }
         return true
@@ -19,11 +18,9 @@ const auth = {
 
         const token = localStorage.getItem('token')
         let decoded = jwt_decode(token)
-
         if (decoded.sub.email) {
             return true
         }
-        
         return false
     },
 
@@ -31,8 +28,6 @@ const auth = {
 
         // const token = auth.get()
         // let decodedToken = jwt.decode(token, {complete: true})
-        
-
     },
 
     set(value) {
@@ -46,6 +41,10 @@ const auth = {
     get() {
         const token = localStorage.getItem('token')
         return token
+    },
+
+    remove() {
+        localStorage.clear();
     }
 
 }

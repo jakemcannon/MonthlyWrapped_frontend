@@ -120,34 +120,24 @@ def callback():
 
 	# pull data out of jwt token, specifcally the user_id
 
-	# TODO: Redirec if the user
-	print(user_data['id'])
-	# 
-	user = User.query.filter_by(user_id=user_data['id']).first()
-	print(user)
+	user =  User.query.filter_by(spotify_id=user_data['id']).first()
+
 	if not user:
 		print("Creating our new user in the db")
 		print(user)
-		# TODO replace user_id with a new uuid() user_id, NOT spotify user_id
 		user_id = str(uuid.uuid4())
 		new_user = User(
 			user_id=user_id,
+			spotify_id = user_data['id'],
 			access_token=token_resp.json()['access_token'],
 			refresh_token=token_resp.json()['refresh_token']
 		)
 		db.session.add(new_user)
 		db.session.commit()
-	verified_user = User.query.filter_by().first()
-	# TODO
-	# TODO
-	# We need conditional logic here to create a jwt with or without the email 
-	# boolean set depending on if there is an email in the database
 
-	jwt_access_token = create_access_token(identity={"user_id":user_id, "email": False})
+	user = User.query.filter_by().first()
+	jwt_access_token = create_access_token(identity={"user_id":user.user_id, "email": user.email})
 
-
-	# return redirect(url_for('authenticate', auth_code=auth_code))
-	# return jsonify(jwt_access_token)
 	query_param = "?token=" + jwt_access_token
 	return redirect("http://localhost:3000/cred" + query_param, code=302)
 
@@ -169,20 +159,20 @@ def get_user():
 
 	return jsonify(u.serialize())
 
-@app.route("/email", methods=["GET", "POST"])
+@app.route("/email", methods=["POST"])
 @jwt_required()
 def set_email():
 
 	user = get_jwt_identity()
-	print(user)
 
-	# update user email filed in database
-	# if successful, a new jwt needs to be created with {..., email: true}
+	u = User.query.filter_by(user_id=user['user_id']).first()
+	email = request.get_json()["email"]
+	u.email = email
+	db.session.commit()
 
-	if request.method == "POST":
-		print("recieved post request")
-		print(request.data)
-	return "hello from email route"
+	jwt_access_token = create_access_token(identity={"user_id":u.user_id, "email": u.email})
+
+	return jsonify(jwt_access_token)
 
 
 @app.route("/playlists")
