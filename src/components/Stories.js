@@ -1,67 +1,10 @@
-import React, {useState, useEffect } from 'react'
-import Button from 'react-bootstrap/Button';
-import ImageGrid from './ImageGrid'
+import React, {useState, useEffect} from 'react'
 import axios from 'axios'
+import Button from 'react-bootstrap/Button';
+import Auth from '../utils/Auth.js'
+import ImageGrid from './ImageGrid'
 
-const s_images = [
-    {
-        "year": "2021",
-        months: [
-            {'month':'05.png'}
-        ]
-    },
-    {
-        "year": "2020",
-        months: [
-            {'month':'may.png'},
-            {'month':'october.png'},
-            {'month':'september.png'}
-        ]
-    },
-    {
-        "year": "2019",
-        months: [
-            {'month':'december.png'},
-            {'month':'november.png'},
-            {'month':'october.png'},
-            {'month':'september.png'},
-            {'month':'august.png'},
-            {'month':'july.png'},
-            {'month':'june.png'},
-            {'month':'may.png'},
-        ]
-    }
-]
-
-const a_images = [
-    {
-        "year": "2021",
-        months: [
-            {'month':'may.png'}
-        ]
-    },
-    {
-        "year": "2020",
-        months: [
-            {'month':'may.png'},
-            {'month':'october.png'},
-            {'month':'september.png'}
-        ]
-    },
-    {
-        "year": "2019",
-        months: [
-            {'month':'december.png'},
-            {'month':'november.png'},
-            {'month':'october.png'},
-            {'month':'september.png'},
-            {'month':'august.png'},
-            {'month':'july.png'},
-            {'month':'june.png'},
-            {'month':'may.png'},
-        ]
-    }
-]
+import { Redirect } from 'react-router-dom';
 
 function Content() {
 
@@ -69,9 +12,12 @@ function Content() {
     const [artists, setArtists] = useState([])
     const [data, setData] = useState(songs)
 
+    const token = Auth.get()
     useEffect(() => {
 
-        axios.get('http://127.0.0.1:5000/songs')
+        axios.get('http://127.0.0.1:5000/songs', {
+            headers: {'Authorization': token}
+        })
         .then(res => {
             setSongs(res.data)
         })
@@ -88,8 +34,9 @@ function Content() {
     }, [songs])
 
     useEffect(() => {
-
-        axios.get('http://127.0.0.1:5000/artists')
+        axios.get('http://127.0.0.1:5000/artists', {
+            headers: {'Authorization': token}
+        })
         .then(res => {
             setArtists(res.data)
         })
@@ -98,6 +45,14 @@ function Content() {
         })
 
     }, [])
+
+    // I think this is our issue... ? maybe
+    // when user has never entered an email,
+    // this conditional has to go at the bottom,
+    // However, the hooks above attempt to run and get interupted
+    if (Auth.isAuthenticated() && !Auth.verifiedEmail()) {
+        return(<Redirect to="/register" />)
+    }
 
     return (
         <div>

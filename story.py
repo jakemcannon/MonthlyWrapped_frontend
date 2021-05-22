@@ -110,13 +110,13 @@ class ArtistStory(Story):
 
 response = create_artist_story_data()
 a = ArtistStory(response.artists, response.images)
-# a.create_image()
+a.create_image()
 # print(a.__dict__)
 # print(a.create_image())
 
 response = create_song_story_data()
 s = SongStory(response.artists, response.songs, response.images)
-# s.create_image()
+s.create_image()
 # print(s.__dict__)
 # print(s.create_image())
 
