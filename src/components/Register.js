@@ -6,7 +6,7 @@ import Auth from '../utils/Auth.js'
 
 function Register() {
 
-    const [redirect, setRedirect] = useState();
+    const [redirect, setRedirect] = useState("");
 
     if (Auth.isAuthenticated() && Auth.verifiedEmail()) {
         return(<Redirect to="/stories" />)
