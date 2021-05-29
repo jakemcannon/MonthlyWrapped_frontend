@@ -87,12 +87,12 @@ class ArtistStory(Story):
 		base = Image.new('RGB', (self.W, self.H), ImageColor.getrgb(settings.ARTIST_BASE_COLOR))
 		draw = ImageDraw.Draw(base)
 
-		print(self.header)
 		self.header = self.create_header(draw, self.header, self.font_color)
 		self.footer = self.create_footer(draw, self.font_color)
-		self.mask = self.create_mask(250, 250)
+		self.mask = self.create_mask(128, 130)
 		self.thumbnails = self.create_thumbnails(self.mask, base)
-		# base.show()
+		self.text = self.create_artist_text(draw)
+		base.show()
 		base.save("artist_story_test.jpg")
 
 	def create_thumbnails(self, mask, base):
@@ -101,11 +101,18 @@ class ArtistStory(Story):
 		for filename in self.images:
 			if filename.endswith(".jpg"):
 				img = Image.open(filename)
-				new_img = img.resize((250,250))
+				new_img = img.resize((128,130))
 
 				new_img.putalpha(mask)
-				base.paste(new_img, settings.ARTIST_PHOTO_POSITION[i], mask)
+				base.paste(new_img, settings.SONG_THUMBNAIL_POSITION[i], mask)
 				i+=1
+
+	def create_artist_text(self, draw):
+		artist_font = ImageFont.truetype(settings.SONG_TEXT_FONT, settings.SONG_TEXT_SIZE)
+
+		for i in range(10):
+			draw.text(settings.SONG_TEXT_POSITION[i], self.artists[i], font=artist_font, fill=settings.SONG_STORY_FONT_COLOR)
+
 
 
 response = create_artist_story_data()
