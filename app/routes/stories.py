@@ -1,21 +1,13 @@
-
-
 import boto3
-from flask import Flask, jsonify
-from flask_jwt_extended import JWTManager, jwt_required
+from flask import Flask, current_app, jsonify
+from flask_jwt_extended import jwt_required
 
-import config
+api_key = current_app.config['AWS_API_KEY']
+secret_key = current_app.config['AWS_API_SECRET_KEY']
+bucket_name = current_app.config['AWS_BUCKET_NAME']
 
-
-app = Flask(__name__)
-app.config['SECRET_KEY'] = config.flask_secret_key
-
-bucket_name = config.bucket_name
-
-client = boto3.client('s3', aws_access_key_id = config.api_key, aws_secret_access_key = config.api_secret)
-
-jwt = JWTManager(app)
-
+app = current_app
+client = boto3.client('s3', aws_access_key_id = api_key, aws_secret_access_key = secret_key)
 
 def get_signed_url(bucket_name, file_name, exp_seconds):
 	return client.generate_presigned_url(
@@ -94,6 +86,3 @@ def get_artists():
 		pass
 
 	return jsonify(result)
-
-if __name__ == '__main__':
-    app.run(debug=True)

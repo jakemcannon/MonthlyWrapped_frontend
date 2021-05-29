@@ -1,27 +1,25 @@
 
 import uuid
+import requests
 
 import urllib
 
-from flask import Flask
+from flask import Flask, current_app, request, redirect
+from flask_cors import CORS, cross_origin
+from flask_jwt_extended import create_access_token
 
-import config
+from models import db
+from models import User
 
-app = Flask(__name__)
-
-
-# TASK: Get the below in to one config file, import that
-# create ab app factory
-
-# config settings
-client_id = config.sp_client_id
-app.config['SECRET_KEY'] = config.flask_secret_key
+app = current_app
 
 # spotify config variables
-auth_endpoint = config.sp_auth_endpoint
-token_endpoint = config.sp_token_endpoint
-scope = config.sp_scope
-redirect_uri = config.sp_redirect_uri
+client_id = current_app.config["SP_CLIENT_ID"]
+client_secret = current_app.config["SP_CLIENT_SECRET"]
+auth_endpoint = current_app.config["SP_AUTH_ENDPOINT"]
+token_endpoint = current_app.config["SP_TOKEN_ENDPOINT"]
+scope = current_app.config["SP_SCOPE"]
+redirect_uri = current_app.config["SP_REDIRECT_URI"]
 
 @app.route("/login", methods=["GET", "POST"])
 def create_authorization_url():
