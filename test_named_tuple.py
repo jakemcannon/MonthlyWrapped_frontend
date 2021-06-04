@@ -7,36 +7,7 @@ import requests
 ArtistData = namedtuple('ArtistStory', ['artists', 'images'])
 SongData = namedtuple('SongStory', ['songs', 'artists', 'images'])
 
-
-def create_artist_story_data():
-
-	with open('artists3.json') as f:
-		data = json.load(f)
-
-	artists = [artist["name"] for artist in data["items"]]
-	images = [data["items"][i]["images"][0]['url'] for i in range(len(data["items"]))]
-
-	# more readable to parse image uris from json
-	# for item in data["items"]:
-		# uri = (item["images"][0]['url'])
-
-
-	for i, url in enumerate(images):
-		url_id_truncated = url[-8:-1]
-		request = requests.get(url).content
-		with open(f'test_downloads/artist/{url_id_truncated}.jpg', 'wb') as handler:
-			images[i] = f'test_downloads/artist/{url_id_truncated}.jpg'
-			handler.write(request)
-
-	story = ArtistData(artists=artists, images=images)
-	return story
-
-
-
-def create_song_story_data():
-
-	with open('songs3.json') as f:
-			data = json.load(f)
+def create_song_story_data(data):
 
 	songs = [data["items"][i]["name"] for i in range(10)]
 	artists = []
@@ -64,12 +35,50 @@ def create_song_story_data():
 	story = SongData(songs=songs, artists=artists, images=images)
 	return story
 
+def create_artist_story_data(data):
 
-s = create_song_story_data()
-a = create_artist_story_data()
-# print(s)
-# print(" ")
-# print(a)
 
+	artists = [artist["name"] for artist in data["items"]]
+	images = [data["items"][i]["images"][0]['url'] for i in range(len(data["items"]))]
+
+	# more readable to parse image uris from json
+	# for item in data["items"]:
+		# uri = (item["images"][0]['url'])
+
+
+	for i, url in enumerate(images):
+		url_id_truncated = url[-8:-1]
+		request = requests.get(url).content
+		with open(f'test_downloads/artist/{url_id_truncated}.jpg', 'wb') as handler:
+			images[i] = f'test_downloads/artist/{url_id_truncated}.jpg'
+			handler.write(request)
+
+	story = ArtistData(artists=artists, images=images)
+	return story
+
+
+
+def make_api_request():
+	# todo
+
+	# for all users in the db (this one is tricky)
+	#		because it changes if we want to use the lambda approach
+	# query for the given user
+
+	# get their access token
+	# if expired, refresh
+
+	# then make a request to their top 10 
+	headers = {'Authorization': "Bearer "}
+	song_data = requests.get("https://api.spotify.com/v1/me/top/tracks?time_range=short_term&limit=10", headers=headers)
+	artist_data = requests.get("https://api.spotify.com/v1/me/top/artists?time_range=short_term&limit=10", headers=headers)
+
+
+	s = create_song_story_data(song_data.json())
+	a = create_artist_story_data(artist_data.json())
+
+	return s, a
+
+make_api_request()
 
 

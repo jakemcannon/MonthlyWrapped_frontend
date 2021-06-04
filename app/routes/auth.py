@@ -59,8 +59,6 @@ def callback():
 	user =  User.query.filter_by(spotify_id=user_data['id']).first()
 
 	if not user:
-		print("Creating our new user in the db")
-		print(user)
 		user_id = str(uuid.uuid4())
 		new_user = User(
 			user_id=user_id,

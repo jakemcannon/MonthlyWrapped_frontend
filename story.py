@@ -6,6 +6,7 @@ from PIL import Image, ImageColor, ImageDraw, ImageFont, ImageOps
 
 import settings
 from test_named_tuple import create_song_story_data, create_artist_story_data
+from test_named_tuple import make_api_request
 
 class Story:
 	def __init__(self):
@@ -70,8 +71,14 @@ class SongStory(Story):
 		artist_font = ImageFont.truetype(settings.ARTIST_TEXT_FONT , settings.ARTIST_TEXT_SIZE)
 
 		for i in range(10):
+			# draw.text(settings.SONG_RANK_POSITION[i], f"#0{i+1}", font=song_font, fill=settings.SONG_STORY_FONT_COLOR)
+			if i < 9:
+				draw.text(settings.RANK_POSITION[i], f"#{i+1}", font=song_font, fill=settings.SONG_STORY_FONT_COLOR)
+			else:
+				draw.text(settings.RANK_POSITION[i], f"#{i+1}", font=song_font, fill=settings.SONG_STORY_FONT_COLOR)
+
 			draw.text(settings.SONG_TEXT_POSITION[i], self.songs[i], font=song_font, fill=settings.SONG_STORY_FONT_COLOR)
-			draw.text(settings.ARTIST_TEXT_POSITION[i], self.artists[i], font=artist_font, fill=settings.SONG_STORY_FONT_COLOR)
+			draw.text(settings.SONG_STORY_ARTIST_TEXT_POSITION[i], self.artists[i], font=artist_font, fill=settings.SONG_STORY_FONT_COLOR)
 
 
 class ArtistStory(Story):
@@ -87,11 +94,11 @@ class ArtistStory(Story):
 		base = Image.new('RGB', (self.W, self.H), ImageColor.getrgb(settings.ARTIST_BASE_COLOR))
 		draw = ImageDraw.Draw(base)
 
-		print(self.header)
 		self.header = self.create_header(draw, self.header, self.font_color)
 		self.footer = self.create_footer(draw, self.font_color)
-		self.mask = self.create_mask(250, 250)
+		self.mask = self.create_mask(128, 130)
 		self.thumbnails = self.create_thumbnails(self.mask, base)
+		self.text = self.create_artist_text(draw)
 		# base.show()
 		base.save("artist_story_test.jpg")
 
@@ -101,27 +108,25 @@ class ArtistStory(Story):
 		for filename in self.images:
 			if filename.endswith(".jpg"):
 				img = Image.open(filename)
-				new_img = img.resize((250,250))
+				new_img = img.resize((128,130))
 
 				new_img.putalpha(mask)
-				base.paste(new_img, settings.ARTIST_PHOTO_POSITION[i], mask)
+				base.paste(new_img, settings.SONG_THUMBNAIL_POSITION[i], mask)
 				i+=1
 
+	def create_artist_text(self, draw):
+		artist_font = ImageFont.truetype(settings.SONG_TEXT_FONT, settings.SONG_TEXT_SIZE)
 
-response = create_artist_story_data()
-a = ArtistStory(response.artists, response.images)
+		for i in range(10):
+			draw.text(settings.RANK_POSITION[i], f"#{i+1}", font=artist_font, fill=settings.ARTIST_STORY_FONT_COLOR)
+			draw.text(settings.ARTIST_TEXT_POSITION[i], self.artists[i], font=artist_font, fill=settings.ARTIST_STORY_FONT_COLOR)
+
+
+response = make_api_request()
+s = SongStory(response[0].artists, response[0].songs, response[0].images)
+a = ArtistStory(response[1].artists, response[1].images)
 a.create_image()
-# print(a.__dict__)
-# print(a.create_image())
-
-response = create_song_story_data()
-s = SongStory(response.artists, response.songs, response.images)
 s.create_image()
-# print(s.__dict__)
-# print(s.create_image())
-
-
-
 
 
 
