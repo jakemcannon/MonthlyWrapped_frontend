@@ -4,7 +4,6 @@ import Button from 'react-bootstrap/Button';
 import Auth from '../utils/Auth.js'
 import ImageGrid from './ImageGrid'
 
-import { Redirect } from 'react-router-dom';
 
 function Content() {
 
@@ -45,11 +44,6 @@ function Content() {
         })
 
     }, [])
-
-    // I think this is our issue... ? maybe
-    // when user has never entered an email,
-    // this conditional has to go at the bottom,
-    // However, the hooks above attempt to run and get interupted
 
     return (
         <div>
