@@ -64,7 +64,8 @@ def callback():
 			user_id=user_id,
 			spotify_id = user_data['id'],
 			access_token=token_resp.json()['access_token'],
-			refresh_token=token_resp.json()['refresh_token']
+			refresh_token=token_resp.json()['refresh_token'],
+			email=user_data['email']
 		)
 		db.session.add(new_user)
 		db.session.commit()
