@@ -50,9 +50,6 @@ function Content() {
     // when user has never entered an email,
     // this conditional has to go at the bottom,
     // However, the hooks above attempt to run and get interupted
-    if (Auth.isAuthenticated() && !Auth.verifiedEmail()) {
-        return(<Redirect to="/register" />)
-    }
 
     return (
         <div>

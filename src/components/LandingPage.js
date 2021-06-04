@@ -10,9 +10,6 @@ import Auth from '../utils/Auth.js'
 
 function LandingPage() {
 
-    if (Auth.isAuthenticated() && !Auth.verifiedEmail()) {
-        return(<Redirect to="/register" />)
-    }
 
     if (Auth.isAuthenticated() ) {
         return(<Redirect to="/stories" />)
