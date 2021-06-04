@@ -19,7 +19,6 @@ def create_app():
 	with app.app_context():
 		db.create_all()
 		import routes.auth
-		import routes.registration
 		import routes.stories
 
 		return app
