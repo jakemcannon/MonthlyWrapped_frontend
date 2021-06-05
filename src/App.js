@@ -13,6 +13,7 @@ import Account from './components/Account.js'
 import About from './components/About.js'
 import Cred from './components/Cred.js'
 import PrivateRoute from './components/PrivateRoute.js'
+import MonthlyImage from './components/MonthlyImage'
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Switch>
         <Route path="/" exact component={LandingPage}/>
           <PrivateRoute path="/stories" component={Stories}/>
+          <PrivateRoute path="/generate_image" component={MonthlyImage}/>
           <Route path="/account" component={Account}/>
           <Route path="/about" component={About}/>
           <Route path="/cred" component={Cred}/>
