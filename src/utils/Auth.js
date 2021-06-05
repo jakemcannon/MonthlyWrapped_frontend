@@ -14,16 +14,6 @@ const auth = {
         return true
     },
 
-    verifiedEmail() {
-
-        const token = localStorage.getItem('token')
-        let decoded = jwt_decode(token)
-        if (decoded.sub.email) {
-            return true
-        }
-        return false
-    },
-
     tokenExp() {
 
         // const token = auth.get()
