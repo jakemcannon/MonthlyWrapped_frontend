@@ -20,6 +20,6 @@ def create_app():
 		db.create_all()
 		import routes.auth
 		import routes.stories
-		import routes.generate_image
+		import routes.generate_images
 
 		return app
