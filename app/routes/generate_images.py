@@ -35,8 +35,12 @@ def upload_to_s3(file_name, object_name):
 	return response
 
 def get_current_end_of_month_stories():
-	urls = []
 
+	# TODO / Look into
+	# Do we need to iterate over every image for a given year
+	# can we not query for the cur_month given we know the naming scheme (which is a WIP atm)
+	
+	urls = []
 	try:
 
 		for item in client.list_objects(Bucket=bucket_name, Prefix = f'user1/songs/{today.year}/')['Contents']:
@@ -86,7 +90,6 @@ def get_end_of_month_images():
 	# - Upload to correct yearly folder based on cur year
 	# - Come up with naming scheme for key in s3 - ? something to do with months?
 	# - look into ImageGrid frontend to recall how ordering out of s3 is working
-	print(today.year)
 	upload_to_s3("song_story_test.jpg", f"user1/songs/{today.year}/" + "13.jpg")
 	upload_to_s3("artist_story_test.jpg", f"user1/artists/{today.year}/" + "13.jpg")
 	get_current_end_of_month_stories()
