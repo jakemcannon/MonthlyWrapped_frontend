@@ -5,8 +5,6 @@ from time import strftime
 from PIL import Image, ImageColor, ImageDraw, ImageFont, ImageOps
 
 import settings
-from test_named_tuple import create_song_story_data, create_artist_story_data
-from test_named_tuple import make_api_request
 
 class Story:
 	def __init__(self):
@@ -121,12 +119,6 @@ class ArtistStory(Story):
 			draw.text(settings.RANK_POSITION[i], f"#{i+1}", font=artist_font, fill=settings.ARTIST_STORY_FONT_COLOR)
 			draw.text(settings.ARTIST_TEXT_POSITION[i], self.artists[i], font=artist_font, fill=settings.ARTIST_STORY_FONT_COLOR)
 
-
-response = make_api_request()
-s = SongStory(response[0].artists, response[0].songs, response[0].images)
-a = ArtistStory(response[1].artists, response[1].images)
-a.create_image()
-s.create_image()
 
 
 

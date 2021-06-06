@@ -58,7 +58,7 @@ def create_artist_story_data(data):
 
 
 
-def make_api_request():
+def make_api_request(token):
 	# todo
 
 	# for all users in the db (this one is tricky)
@@ -69,16 +69,16 @@ def make_api_request():
 	# if expired, refresh
 
 	# then make a request to their top 10 
-	headers = {'Authorization': "Bearer "}
+	headers = {'Authorization': f"Bearer {token}"}
 	song_data = requests.get("https://api.spotify.com/v1/me/top/tracks?time_range=short_term&limit=10", headers=headers)
 	artist_data = requests.get("https://api.spotify.com/v1/me/top/artists?time_range=short_term&limit=10", headers=headers)
+
+	print(song_data)
 
 
 	s = create_song_story_data(song_data.json())
 	a = create_artist_story_data(artist_data.json())
 
 	return s, a
-
-make_api_request()
 
 
