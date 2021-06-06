@@ -5,9 +5,9 @@ from flask import Flask, current_app, jsonify
 from flask_jwt_extended import jwt_required, get_jwt_identity
 
 
-from .test_named_tuple import make_api_request
-from .story import SongStory
-from .story import ArtistStory
+from test_named_tuple import make_api_request
+from story import SongStory
+from story import ArtistStory
 
 from models import db
 from models import User
@@ -57,6 +57,10 @@ def create_end_of_month_images():
 	# TODO: throw exception if no users found
 	u = User.query.filter_by(user_id=user['user_id']).first()
 
+	# TODO:
+	# - check if cur month has already been created, if so, do not create a duplicate
+	# - idk if this will be a db table value or checking s3 for cur month is none None
+
 	# build those two images
 	# TODO: throw exception if api response is bad
 	response = make_api_request(u.access_token)
@@ -78,6 +82,6 @@ def create_end_of_month_images():
 	get_end_of_month_stories()
 
 	# retrieve links for those two images
-	results = get_current_end_of_month_stories()
+	results = get_end_of_month_stories()
 
 	return jsonify(results)
