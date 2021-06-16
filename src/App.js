@@ -22,7 +22,7 @@ function App() {
         <Switch>
         <Route path="/" exact component={LandingPage}/>
           <PrivateRoute path="/stories" component={Stories}/>
-          <PrivateRoute path="/generate_image" component={MonthlyImage}/>
+          <PrivateRoute path="/current_month" component={MonthlyImage}/>
           <Route path="/account" component={Account}/>
           <Route path="/about" component={About}/>
           <Route path="/cred" component={Cred}/>

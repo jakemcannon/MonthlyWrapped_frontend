@@ -22,14 +22,25 @@ function MonthlyImage() {
         })
     }, [])
 
+
+    // TODO
+    // If not last day of month, have some default message
+    // Loading screen
+
     return (
         <div>
-        <h1>This is the test image generation endpoint</h1>
-        <p>It may take about 5 secs to load</p>
+        <h1 className="heading">Here are your July 2021 stories</h1>
+        <h1 className="heading">Here are your stories for June 2021</h1>
          {!isLoading  && 
          <div>
-            <img className="photo-list-image" src={currentMonth[0].song} alt=""/>
-            <img className="photo-list-image" src={currentMonth[1].artist} alt=""/>
+             <ul className="photo-list">
+                 <li>
+                    <img className="photo-list-image" src={currentMonth[0].song} alt=""/>
+                 </li>
+                 <li>
+                    <img className="photo-list-image" src={currentMonth[1].artist} alt=""/>
+                 </li>
+             </ul>
         </div>}
          </div>
     )
