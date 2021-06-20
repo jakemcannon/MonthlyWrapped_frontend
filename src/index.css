@@ -1,11 +1,15 @@
 @font-face {
   font-family: 'CircularStd-Book';
-  src: local('CircularStd-Book'), url('./fonts/CircularStd-Book.ttf'), format('woff2');
+  src: url("https://monthlywrapped-fonts.s3.amazonaws.com/CircularStd-Book.woff") format('woff'),
+  url("https://monthlywrapped-fonts.s3.amazonaws.com/CircularStd-Book.woff2") format('woff2'),
+  url("https://monthlywrapped-fonts.s3.amazonaws.com/CircularStd-Book.ttf") format('truetype');
 }
 
 @font-face {
   font-family: 'CircularStd-Bold';
-  src: local('CircularStd-Bold'), url('./fonts/CircularStd-Bold.ttf'), format('woff2');
+  src: url("https://monthlywrapped-fonts.s3.amazonaws.com/CircularStd-Bold.woff") format('woff'),
+  url("https://monthlywrapped-fonts.s3.amazonaws.com/CircularStd-Bold.woff2") format('woff2'),
+  url("https://monthlywrapped-fonts.s3.amazonaws.com/CircularStd-Bold.ttf") format('truetype'); 
 }
 
 body {

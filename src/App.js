@@ -1,7 +1,7 @@
 import React from 'react';
 import {BrowserRouter as Router, Switch, Route, Redirect} from 'react-router-dom'
 
-import './App.css';
+import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './components/LandingPage.js';
 
@@ -13,6 +13,7 @@ import Account from './components/Account.js'
 import About from './components/About.js'
 import Cred from './components/Cred.js'
 import PrivateRoute from './components/PrivateRoute.js'
+import MonthlyImagePage from './components/MonthlyImagePage'
 import MonthlyImage from './components/MonthlyImage'
 
 function App() {
@@ -22,7 +23,7 @@ function App() {
         <Switch>
         <Route path="/" exact component={LandingPage}/>
           <PrivateRoute path="/stories" component={Stories}/>
-          <PrivateRoute path="/current_month" component={MonthlyImage}/>
+          <PrivateRoute path="/current_month" component={MonthlyImagePage}/>
           <Route path="/account" component={Account}/>
           <Route path="/about" component={About}/>
           <Route path="/cred" component={Cred}/>
