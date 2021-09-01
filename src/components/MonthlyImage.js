@@ -18,7 +18,7 @@ function MonthlyImage() {
 
     useEffect(() => {
         const token = Auth.get()
-        axios.get('http://127.0.0.1:5000/generate_images', {
+        axios.get('http://127.0.0.1:5000/generate_images_test', {
             headers: {'Authorization': token}
         })
         .then(res => {
