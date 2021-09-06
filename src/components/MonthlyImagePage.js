@@ -1,5 +1,4 @@
 import React from 'react'
-import ImageGrid from './ImageGrid';
 
 import MonthlyImage from './MonthlyImage'
 
@@ -11,20 +10,20 @@ console.log(today.getTime())
 console.log(tomorrow.getTime())
 console.log(lastDayOfMonth.getTime())
 
-if (today != lastDayOfMonth) {
+if (today !== lastDayOfMonth) {
     console.log("It is not the last day of the month")
 }
 
-if (today == tomorrow) {
+if (today === tomorrow) {
     console.log("It is the last day of the month")
 }
-console.log(today.getTime() == tomorrow.getTime())
+console.log(today.getTime() === tomorrow.getTime())
 console.log(today)
 console.log(tomorrow)
 
 function MonthlyImagePage() {
 
-    if (today.getTime() != lastDayOfMonth.getTime()) {
+    if (today.getTime() !== lastDayOfMonth.getTime()) {
         return <MonthlyImage />
     }
 

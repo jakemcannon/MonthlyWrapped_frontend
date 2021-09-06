@@ -7,7 +7,7 @@ function Account() {
 
     let myConfig = {
         headers: {
-           Authorization: "Bearer " + ""
+           Authorization: "Bearer "
         }
      }
 
